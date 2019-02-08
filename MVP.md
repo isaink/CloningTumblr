@@ -65,7 +65,42 @@ Colors Palette: --
    * DB Schema
    * Sample State
 
-## Implementation Timeline
-    Phases 1 
-        * objectives:
+## Implementation Timeline: 
+- Phases 1 : Backend setup and Front End 
+    * 1 week: 
+            - Creat own API database & also figure out how to use Tumblr API
+            - Routes
+            - Creating **Info** & **Register** Page
+            - Function Get random Post to the background 
+            - Submit forms: Log In & Sign Up.
+            - Search.
+    * Second week:
+            - **Home** page:
+                - Dashboard who random & timeline posts.
+                - Navbar: 
+                    - User info { likes, following, posts, follows}
+                    - Explore
+                    - Make a new Post types
+                    - Back Home 
+                - Create Post types.
+                - mouseover profile Info
+                - likes post
+                - reblog post
+                - comment post
+                - GET, DELETE, POST, PATCH (CRUD-post)
+    * Third week:
+           - **Follow** and **Following** Pages:
+                - Button to follow for both pages.
+                - Button to Unfollow to Following page.
+                - Pop up w/ mouseover Info of Post-Blog visualization on Following Page.
+                - Search option on Follow page.
+                - GET, DELETE, POST (CRUD-follow)
+    * Fouth week: 
+            - **Likes** Page
+                - Button to Follow user.
+                - Show liked post
+                - Complete: the **Router**, **CSS** style,
+                - GET, DELETE, POST (CRUD-likes) 
+
+
             Get Tumblr API: https://github.com/tumblr/tumblr.js  & https://www.tumblr.com/docs/en/api/v2 & https://tumblr.github.io/tumblr.js/TumblrClient.html#.createPost
