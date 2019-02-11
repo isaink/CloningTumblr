@@ -103,4 +103,4 @@ Colors Palette: --
                 - GET, DELETE, POST (CRUD-likes) 
 
 
-            Get Tumblr API: https://github.com/tumblr/tumblr.js  & https://www.tumblr.com/docs/en/api/v2 & https://tumblr.github.io/tumblr.js/TumblrClient.html#.createPost
+Get Tumblr API: https://github.com/tumblr/tumblr.js  & https://www.tumblr.com/docs/en/api/v2 & https://tumblr.github.io/tumblr.js/TumblrClient.html#.createPost

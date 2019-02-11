@@ -45,6 +45,8 @@
     1. Post liked
     2. Info total liked 
     3. Own Posts publications. [ connect to **PostPage**]
+#### Button creatorPosts 
+    - Text, photos, gifs, quotes, chats, audio, video, Q&A
 ##Inbox [ not too important ]
 
 ##Flash Notifications  [ not too important ]
@@ -52,7 +54,6 @@
 
 ## Acount Info - Preferences  [ not too important ]
     
-## Button creatorPosts 
-    - Text, photos, gifs, quotes, chats, audio, video, Q&A
+
 
 ##Close Session
