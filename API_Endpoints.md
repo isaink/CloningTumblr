@@ -1,8 +1,8 @@
-#API Endpoints
+# API Endpoints
 
-##HTML API
+## HTML API
 
-###Root
+### Root
  - GET /
     - Loads React web app.
     - **Info** Page w/ **LogIn** session
@@ -10,9 +10,9 @@
     - User **Home** page where you see all the following post with timeline.
         tumblr/dashboard 
 
-##JSON API
+## JSON API
 
-###Users
+### Users
 - GET /
     - get all users-blogger on Tumblr
         tumblr/users
@@ -23,7 +23,7 @@
 - DELETE /
     - Delete user account.
 
-###Session
+### Session
 - POST /
     - Creates new session on user login
         tumblr/session
@@ -35,7 +35,7 @@
 userFollowing
 userLikes -->
 
-###Tag
+### Tag
 
 ###Follows
 - GET /
@@ -48,9 +48,9 @@ userLikes -->
 - DELETE /
     - Delete follows & stop following.
 
-###Likes
+### Likes
 
-###Posts
+### Posts
  - GET / 
     - get to see the post of the user individualy or all together.
         tumblr/posts/user/:id
@@ -61,7 +61,7 @@ userLikes -->
 - PATH/ 
     - 
 
-###Search
+### Search
  - GET/ 
     - get what your a looking.
     /search/{name}
