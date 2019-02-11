@@ -37,7 +37,7 @@ userLikes -->
 
 ### Tag
 
-###Follows
+### Follows
 - GET /
     - get all the bloggers following
         tumblr/following
@@ -65,7 +65,7 @@ userLikes -->
  - GET/ 
     - get what your a looking.
     /search/{name}
-- PATH
+ - PATH
     - update your search.
     /search/{name}
 createPost
