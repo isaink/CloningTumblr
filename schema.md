@@ -11,6 +11,15 @@ name      | data type |       details
 `likes_counter(id)` | integer | null, foreign key
 > User has a profile, many posts, many follows, many followers, many likes (likes_counter)
 
+### Blog 
+name      | data type |       details
+----------|-----------|--------------------------
+`id `     |  integer  |   not null, primary key
+`user(id)`|  integer    |   not null, foreign key
+`post(id)`|  integer    |   not null, foreign key
+`tag(id)` |  integer    |   not null, foreign key
+
+> A new session is added to this project and the Explore page is deleted instead.
 ### Posts
 name      | data type |       details
 ----------|-----------|---------------------------
