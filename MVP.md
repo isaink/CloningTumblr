@@ -1,15 +1,16 @@
 # The App for Trends + Fans
 `[∞influers]` 
 Origin of `infinite influencers` INF-LUENCERS, and from the similitude of sounds: flux, flow.
+
 The App that makes closer relations between fans and trends. 
 
-Is an App built with Express and React. It's a social media for blog users + fans that allows following blogs, interact with other bloggers thru shares, give likes contents, and be aware of the new trends by tags.
+Is an Full-Stack App built with Express, React and Redux. It's a social media for blog users + fans that allows following blogs, interact with other bloggers thru shares, give likes contents, and be aware of the new trends by tags.
 
 Gives the idea of accessibility infinite-trend for users-fans thru visual contents on scroll endless.
 
 ### Brand Idea: 
-Using symbol of Inifinite, signal of capturing a photo (moving fingers)
-Visual Interface
+Using symbol of Inifinite.
+Visual Interface...
 Colors Palette: --
 
 ## Minimum viable product Follows:
