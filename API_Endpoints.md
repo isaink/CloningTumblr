@@ -3,7 +3,7 @@
 ## HTML API
 
 ### Root
- - GET /
+ - `GET `
     - Loads React web app.
         `influers/` & `influers/dashboard `
 **Info** Page w/ **LogIn** session.
