@@ -19,38 +19,38 @@
 > `Bonus`
 
 ## Homepage
-    - [ ] 1. Header 
+    1. Header 
         * Logo
         * Search Input
         * Options NAVBAR
         * Log out/ log in form
-    - [ ] 2. Dashboard Session w/ Live Feed, `infinite show posts` 
+    2. Dashboard Session w/ Live Feed, `infinite show posts` 
         * Post-creator Session
         * Post Session 
-    - [ ] 3. Footer
+    3. Footer
         About Tumblr
 > Have randoms / timeline posts.
 > `BONUS` Button that has a menu w/ options to create a new Posts.
 > `BONUS` Footer session.
 
 ## Likes Page
-     - [ ] 1. Post liked
-     - [ ] 2. Info total liked 
-     - [ ] 3. Button: Own Posts. `To PostPage` or `Blog page`.
+    1. Post liked
+    2. Info total liked 
+    3. Button: Own Posts. `To PostPage` or `Blog page`.
 
 ## Follow Page
-    - [ ] 1. Following posts.
-    - [ ] 2. Button delete follow.
-    - [ ] 3. Search option.
+    1. Following posts.
+    2. Button delete follow.
+    3. Search option.
 
 ## Followers Page
-    - [ ] 1. Followers posts.
-    - [ ] 2. Button block follower. `Bonus`
-    - [ ] 3. Button to Follow.
-    
+    1. Followers posts.
+    2. Button block follower. `Bonus`
+    3. Button to Follow.
+
 ## Blog Page
-    - [ ] 1. Blog Name.  
-    - [ ] 2. User Name.
-    - [ ] 3. Body of own Posts.
+    1. Blog Name.  
+    2. User Name.
+    3. Body of own Posts.
 
 > `BONUS` Close Session & Blog Page.
