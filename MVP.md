@@ -1,3 +1,5 @@
+[Trello](https://trello.com/b/BdiIr9lF )
+
 # ∞INFLUERS
 `[∞influers]` Origin of `infinite influencers` INF-LUENCERS, and from the similitude of sounds: flux, flow.
 
