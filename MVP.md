@@ -16,50 +16,50 @@ Colors Palette: --
 ## Minimum viable product Follows:
   - **Project Structure:** 
     - **Users:** [Main]
-    - **Tags:**  [for Social networking website, incluing Likes]
-    - **Likes** 
+    - **Tags:**  [for Social networking website]
+    - **Likes**  [for Social networking website]
     - **Follows:** [users - blogs]
-    - **Posts:** [Short-form blog] [Send posts to others, create, delete, updated] 
-        - likes, share, comment, send [User or OutSide thru: Email, <>, link, Social media: Twitter, Pinterest, Facebook, Reddit]
+    - **Posts:** [Short-form blog] 
+        - likes, 
+        - comment, 
+        - tag,
+        - share posts to [User or via: email, link, social media: Twitter, Pinterest, Facebook, Reddit] `Is BONUS'
 
- 
  - **DashBoard Interface**
      - Live Feed [ infinite show posts ]
      - Tags
      - Multimedia SRC
-        - Text [video, image, gif, lines, continuo session] [tag]
-        - Images [only img]
-        - Video [ pc or web]
-        - Chat [ give a fake chat] & [ share to Twitter] [tag]
-        - Quotes [" "] [video, image, gif, lines, continuo session] [tag]
-        - Links [to blog pages] [url]
-        - Submit Questions
-        - Audio / Music [ url ]
+        - Text `[video, image, gif, lines, continuo session] [tag]`
+        - Images `[only img]`
+        - Video `[ pc or URL]`
+        - Chat `[ give a fake chat] & [ share to Twitter] [tag]` `Is BONUS'
+        - Quotes `[" "] [video, image, gif, lines, continuo session] [tag]` `Is BONUS'
+        - Links `[to blog pages] [url]`
+        - Audio / Music `[ URL ]`
 
  - **Pages:**
-    - Info & Register Page 
-        -background image or gif of a user blogger
-        - session log in - sing up
     - Home Page [ **Overriding**]
         -Session ( Header )
             1. Logo
             2. Search
             3. Options NAVBAR
-        - Session ( Recommended blog & Radar )
+        - Session ( Recommended blog & Radar ) `Is BONUS'
             1. Follows
         - Session ( Post )
-        - Session ( Q&A )
         - Session ( Wall- Dashboard )
     - Blog Page 
 
-    **EXTRA**
-    - Explore Page
-        - Blog of the moment
-    - Inbox Page
-    - Insta Message Page
-    - See activity Page [ likes, reblog, follows]
-    - Account Page
-    - Made new Post Float-Page [Have Multimedia SRC]
+## BONUS
+>   - Explore Page.
+>        - Blog of the moment..
+>    - Inbox Page.
+>    - Recommended blog & Radar.
+>    - See activity Page [ likes, reblog, follows].
+>    - Made new Post Float-Page [Have Multimedia SRC].
+>    - Info & Register Page .
+>        - background image or gif of a user blogger.
+>        - session log in - sing up.
+>   - Share posts.
 
 ## Docs: 
    * View Wireframes
@@ -73,7 +73,6 @@ Colors Palette: --
     * 1 week: 
             - Creat own API database & also figure out how to use Tumblr API
             - Routes
-            - Creating **Info** & **Register** Page
             - Function Get random Post to the background 
             - Submit forms: Log In & Sign Up.
             - Search.
