@@ -7,6 +7,7 @@ The App that makes closer relations between fans and trends.
 Is an Full-Stack App built with Express, React and Redux. It's a social media for blog users + fans that allows following blogs, interact with other bloggers thru shares, give likes contents, and be aware of the new trends by tags.
 
 Gives the idea of accessibility infinite-trend for users-fans thru visual contents on scroll endless.
+> This is a clone of Tumblr.
 
 ### Brand Idea: 
 Using symbol of Inifinite.
