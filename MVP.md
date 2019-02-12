@@ -79,7 +79,6 @@ Colors Palette: --
                 - Dashboard who random & timeline posts.
                 - Navbar: 
                     - User info { likes, following, posts, follows}
-                    - Explore
                     - Make a new Post types
                     - Back Home 
                 - Create Post types.
