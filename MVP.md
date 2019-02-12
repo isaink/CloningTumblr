@@ -39,22 +39,19 @@ Colors Palette: --
 
  - **Pages:**
     - Home Page [ **Overriding**]
-        -Session ( Header )
+        - Session ( Header )
             1. Logo
             2. Search
             3. Options NAVBAR
-        - Session ( Recommended blog & Radar ) `Is BONUS`
-            1. Follows
         - Session ( Post )
         - Session ( Wall- Dashboard )
     - Blog Page 
 
 ## BONUS
->   - Explore Page.
->        - Blog of the moment..
->    - Inbox Page.
+>    - Explore page with blog of the moment..
 >    - Recommended blog & Radar.
->    - See activity Page [ likes, reblog, follows].
+>    - Inbox page.
+>    - See activity-notifications Page [ likes, reblog, follows].
 >    - Made new Post Float-Page [Have Multimedia SRC].
 >    - Info & Register Page .
 >        - background image or gif of a user blogger.
