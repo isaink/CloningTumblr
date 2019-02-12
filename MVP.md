@@ -23,7 +23,7 @@ Colors Palette: --
         - likes, 
         - comment, 
         - tag,
-        - share posts to [User or via: email, link, social media: Twitter, Pinterest, Facebook, Reddit] `Is BONUS'
+        - share posts to [User or via: email, link, social media: Twitter, Pinterest, Facebook, Reddit] `Is BONUS`
 
  - **DashBoard Interface**
      - Live Feed [ infinite show posts ]
@@ -32,8 +32,8 @@ Colors Palette: --
         - Text `[video, image, gif, lines, continuo session] [tag]`
         - Images `[only img]`
         - Video `[ pc or URL]`
-        - Chat `[ give a fake chat] & [ share to Twitter] [tag]` `Is BONUS'
-        - Quotes `[" "] [video, image, gif, lines, continuo session] [tag]` `Is BONUS'
+        - Chat `[ give a fake chat] & [ share to Twitter] [tag]` `Is BONUS`
+        - Quotes `[" "] [video, image, gif, lines, continuo session] [tag]` `Is BONUS`
         - Links `[to blog pages] [url]`
         - Audio / Music `[ URL ]`
 
@@ -43,7 +43,7 @@ Colors Palette: --
             1. Logo
             2. Search
             3. Options NAVBAR
-        - Session ( Recommended blog & Radar ) `Is BONUS'
+        - Session ( Recommended blog & Radar ) `Is BONUS`
             1. Follows
         - Session ( Post )
         - Session ( Wall- Dashboard )
