@@ -38,15 +38,17 @@ Colors Palette: --
         - Audio / Music `[ URL ]`
 
  - **Pages:**
-    - Home Page [ **Overriding**]
+    1. Home [ **Overriding**]
         - Session ( Header )
-            1. Logo
-            2. Search
-            3. Options NAVBAR
+            - Logo
+            - Search
+            - Options NAVBAR
         - Session ( Post )
         - Session ( Wall- Dashboard )
-    - Blog Page 
-    - Post follows and following.
+    2. Blog
+    3. Follows 
+    4. Followers
+    5. Likes 
 
 ## BONUS
 >    - Explore page with blog of the moment..
