@@ -98,3 +98,4 @@
  > `Session`
  > `Search`
  > `Follow`
+ > `InfoPage`
