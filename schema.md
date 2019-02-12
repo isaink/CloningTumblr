@@ -14,43 +14,43 @@ name      | data type |       details
 ### Posts
 name      | data type |       details
 ----------|-----------|---------------------------
-id        |  integer  |  not null, primary key
-title     |  string   |  not null
-body      |  string	  |  not null
-image     |  string   |  null
-datetime  |  string	  |  not null
-tag(id)   | integer   | null, foreign key
-likes(id) | integer   | null, foreign key
+`id`        |  integer  |  not null, primary key
+`title`     |  string   |  not null
+`body `     |  string	  |  not null
+`image`     |  string   |  null
+`datetime ` |  string	  |  not null
+`tag(id) `  | integer   | null, foreign key
+`likes(id) `| integer   | null, foreign key
 > Post body can have: text, image, link, audio, video.
 > Post belog to Users.
 
 ### Tags
 name      | data type |       details
 ----------|-----------|---------------------------
-id        |   integer |    not null, primary key
-tag_name  |   string  |    not null
-posts(id) |   integer |    not null, foreign key
+`id `       |   integer |    not null, primary key
+`tag_name ` |   string  |    not null
+`posts(id)` |   integer |    not null, foreign key
 > Tag belog to posts.
 
 ### Likes
 name              | data type |       details
 ------------------|-----------|-------------------
-id                |   integer |    not null, primary key
-liked_posts(id)   |   integer |    not null, foreign key
-likes_counter(id)| integer    |    not null, foreign key
+`id `               |   integer |    not null, primary key
+`liked_posts(id) `  |   integer |    not null, foreign key
+`likes_counter(id`)| integer    |    not null, foreign key
 > likes belog to post and to users.
 >  user have likes_counter(id).
 
 ### Follows
 name              | data type |       details
 ------------------|-----------|-------------------
-id                |  integer  |   not null, primary key
-user(id)          |  integer  |   not null, foreign key
+`id  `              |  integer  |   not null, primary key
+`user(id)`          |  integer  |   not null, foreign key
 > Follows belog to users.
 
 ### Followers
 name              | data type |       details
 ------------------|-----------|-------------------
-id                |  integer  |   not null, primary key
-user(id)          |  integer  |   not null, foreign key
+`id  `              |  integer  |   not null, primary key
+`user(id)`          |  integer  |   not null, foreign key
 > Followers belog to users.
