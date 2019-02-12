@@ -5,71 +5,97 @@
 ### Root
  - GET /
     - Loads React web app.
-    - **Info** Page w/ **LogIn** session
-        tumblr/
-    - User **Home** page where you see all the following post with timeline.
-        tumblr/dashboard 
+        `influers/` & `influers/dashboard `
+**Info** Page w/ **LogIn** session.
+User **Home** page where you see all the following post with timeline.
 
 ## JSON API
 
 ### Users
-- GET /
-    - get all users-blogger on Tumblr
-        tumblr/users
-    - get individual user info
-        tumblr/user/:id 
-- POST / 
+ - `GET`
+    - get individual user info.
+       `/influers/user/:id` 
+ - `POST` 
     - Create a user account.
-- DELETE /
+        `/influers/users`
+ - `DELETE`
     - Delete user account.
-
-### Session
-- POST /
-    - Creates new session on user login
-        tumblr/session
-- DELETE 
-    - Deletes session on user logout
-        tumblr/session
-
-<!-- userDashboard
-userFollowing
-userLikes -->
+    `/influers/user/:id`
+ - `PATCH`
+    - update info user account.
 
 ### Tag
-
-### Follows
-- GET /
-    - get all the bloggers following
-        tumblr/following
-    - get individual follow posts
-    - tumblr/:id
-- POST / 
-    - Update your follows.
-- DELETE /
-    - Delete follows & stop following.
+ - `GET`
+    - get all post by that tag.
+        `influers/tagged/{tag}`
 
 ### Likes
+ - `GET`
+    - get all liked posts.
+         `/influers/likes`
+ - `POST`
+    - add a new like 
+        `/influers/like`
+ - `DELETE`
+    -  delete a single liked post
+        `/influers/like/:id`
 
 ### Posts
- - GET / 
-    - get to see the post of the user individualy or all together.
-        tumblr/posts/user/:id
+ - `GET /`
+    - get to see all post.
+        `influers/post/user/:id`
+    - get to see the post of the user individually.
+         `influers/post/:id`
     - get post for types of multimedia.
-        tumblr/posts/{type}
-- POST/
-    - tumblr/
-- PATH/ 
-    - 
+        `influers/posts/{type}`
+ - `POST/`
+    - add a new post.
+        `influers/post`
+ - `PATH/`
+    - update a single post.
+        `influers/post/:id`
+ - `DELETE/`
+    -delete a single post.
+        `influers/post/:id`
+
+### Comments
+ - `POST` 
+    - add or create a new comment.
+       `influers/comment`
+ - `PATCH`
+    - update a comment.
+        `influers/comment/:id`
+ - `DELETE`
+    - delete a single comment.
+        `/comment/:id`
+
+### Follows
+ - `GET`
+    - get the users that user follow.
+        `influers/following`
+    - get the user followers.
+        `influers/followers`
+ - `DELETE`
+    - Delete follows & stop following.
+        `influers/following` & `influers/followers`
 
 ### Search
- - GET/ 
+ - `GET`   
     - get what your a looking.
-    /search/{name}
- - PATH
+        `influers/searching/{name}`
+ - `PATH`
     - update your search.
-    /search/{name}
-createPost
-editPost
-reblogPost
-deletePost
-<!-- taggedPosts -->
+        `influers/searching/{name}`
+
+### Session
+ - `POST`
+    - Welcome the user to a new session on user login.
+        `influers/session`
+ - `DELETE` 
+    - Deletes session on user logout.
+        `influers/session`
+
+## Bonus:
+ > `Session`
+ > `Search`
+ > `Follow`

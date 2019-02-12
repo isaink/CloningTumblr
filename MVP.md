@@ -1,5 +1,7 @@
 # The App for Trends + Fans
-[Re-Name] The App that makes closer relations between fans and trends. 
+`[∞influers]` 
+Origin of `infinite influencers` INF-LUENCERS, and from the similitude of sounds: flux, flow.
+The App that makes closer relations between fans and trends. 
 
 Is an App built with Express and React. It's a social media for blog users + fans that allows following blogs, interact with other bloggers thru shares, give likes contents, and be aware of the new trends by tags.
 
