@@ -1,6 +1,6 @@
 # Component Hierarchy
 
-## Info & Register Page [`Bonus`]
+## Info & Register Page
     * A scroll down page:
         1. first slice:
             * search form       [ top-left ]
@@ -16,7 +16,7 @@
         5. Firth slice:
             * Post types to choose  [ align-center ]
         6. Log In                   [ align-center ]
-> `Bonus`
+> Is a`Bonus`
 
 ## Homepage
     1. Header 
