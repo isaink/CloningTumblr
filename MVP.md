@@ -61,34 +61,28 @@ Colors Palette: --
 >        - session log in - sing up.
 >   - Share posts.
 
-## Docs: 
-   * View Wireframes
-   * React Components
-   * API Endpoints
-   * DB Schema
-   * Sample State
-
 ## Implementation Timeline: 
-- Phases 1 : Backend setup and Front End 
-    * 1 week: 
-            - Creat own API database & also figure out how to use Tumblr API
-            - Routes
-            - Function Get random Post to the background 
-            - Submit forms: Log In & Sign Up.
-            - Search.
+### Phases 1 : Backend setup (2 days)
+    * 1 day: 
+            - `Creat own API database.`
+            - `Routes`
+            - `Queries`
+            
     * Second week:
             - **Home** page:
-                - Dashboard who random & timeline posts.
-                - Navbar: 
-                    - User info { likes, following, posts, follows}
-                    - Make a new Post types
-                    - Back Home 
+                - Dashboard which is random & timeline posts.
+                - Function Get random Post to the background 
                 - Create Post types.
                 - mouseover profile Info
                 - likes post
-                - reblog post
                 - comment post
                 - GET, DELETE, POST, PATCH (CRUD-post)
+            - Navbar: 
+                    - User info { likes, following, posts, follows}
+                    - Make a new Post types
+                    - Back Home 
+            - Submit forms: Log In & Sign Up.
+            - Search.
     * Third week:
            - **Follow** and **Following** Pages:
                 - Button to follow for both pages.
