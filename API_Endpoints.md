@@ -5,9 +5,8 @@
 ### Root
  - `GET `
     - Loads React web app.
-        `influers/` & `influers/dashboard `
-    - Load the **InfoPage** w/ **LogIn** session.
-    - Also **User Home page**
+    - Shows the **InfoPage** w/ **LogIn** session. `influers/`
+    - Also **User Home page** `influers/dashboard `
 
 ## JSON API
 
