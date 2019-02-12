@@ -1,5 +1,5 @@
-# `[∞influers]` 
-Origin of `infinite influencers` INF-LUENCERS, and from the similitude of sounds: flux, flow.
+# ∞INFLUERS
+`[∞influers]` Origin of `infinite influencers` INF-LUENCERS, and from the similitude of sounds: flux, flow.
 
 The App that makes closer relations between fans and trends. 
 
