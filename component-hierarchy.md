@@ -45,9 +45,10 @@
 
 ## Followers Page
     1. Followers posts.
-    2. Button block follower. `Bonus`
+    2. Button block follower. 
     3. Button to Follow.
-
+> `Bonus` Button block follower. 
+ 
 ## Blog Page
     1. Blog Name.  
     2. User Name.
