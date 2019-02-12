@@ -46,6 +46,7 @@ Colors Palette: --
         - Session ( Post )
         - Session ( Wall- Dashboard )
     - Blog Page 
+    - Post follows and following.
 
 ## BONUS
 >    - Explore page with blog of the moment..
