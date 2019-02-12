@@ -21,7 +21,7 @@
 ## Homepage
     1. Header 
         * Logo
-        * Search Input
+        * `Search` Input
         * Options NAVBAR
         * Log out/ log in form
     2. Dashboard Session w/ Live Feed, `infinite show posts` 

@@ -16,7 +16,6 @@ name      | data type |       details
 ----------|-----------|--------------------------
 `id `     |  integer  |   not null, primary key
 `user(id)`|  integer    |   not null, foreign key
-`post(id)`|  integer    |   not null, foreign key
 `tag(id)` |  integer    |   not null, foreign key
 
 > A new session is added to this project and the Explore page is deleted instead.
@@ -30,6 +29,7 @@ name      | data type |       details
 `datetime ` |  string	  |  not null
 `tag(id) `  | integer   | null, foreign key
 `likes(id) `| integer   | null, foreign key
+`blog(id)`  | integer   | null, foreign key
 > Post body can have: text, image, link, audio, video.
 > Post belog to Users.
 
