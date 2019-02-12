@@ -6,8 +6,8 @@
  - `GET `
     - Loads React web app.
         `influers/` & `influers/dashboard `
-**Info** Page w/ **LogIn** session.
-User **Home** page where you see all the following post with timeline.
+    - Load the **InfoPage** w/ **LogIn** session.
+    - Also **User Home page**
 
 ## JSON API
 
