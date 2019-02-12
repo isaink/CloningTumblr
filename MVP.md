@@ -67,7 +67,6 @@ Colors Palette: --
             - `Creat own API database.`
             - `Routes`
             - `Queries`
-            
     * Second week:
             - **Home** page:
                 - Dashboard which is random & timeline posts.
