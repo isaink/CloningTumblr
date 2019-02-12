@@ -1,6 +1,6 @@
-#Component Hierarchy
+# Component Hierarchy
 
-##Info & Register Page
+## Info & Register Page [`Bonus`]
     * A scroll down page:
         1. first slice:
             * search form       [ top-left ]
@@ -16,44 +16,41 @@
         5. Firth slice:
             * Post types to choose  [ align-center ]
         6. Log In                   [ align-center ]
+> `Bonus`
 
-##Homepage
-    * Have randoms / timeline posts
-    1. Header {
+## Homepage
+    - [ ] 1. Header 
+        * Logo
         * Search Input
         * Options NAVBAR
-    }
-    2. Dashboard with Live Feed [ infinite show posts ]
-    3. Menu Post creator-options
-    4. Recommended posts & Radar posts
-    5. Footer {
+        * Log out/ log in form
+    - [ ] 2. Dashboard Session w/ Live Feed, `infinite show posts` 
+        * Post-creator Session
+        * Post Session 
+    - [ ] 3. Footer
         About Tumblr
-    }
+> Have randoms / timeline posts.
+> `BONUS` Button that has a menu w/ options to create a new Posts.
+> `BONUS` Footer session.
 
-##Explore Page
-    1. Sub-header (sessions of text, photos, gifs, quotes, chats, audio, video, Q&A)
-    2. Blog trends
-    3. Dashboard random posts {
-        * Recomendation
-        * Popular
-        * Selections
-        * Specific {
-            text, photos, gifs, quotes, chats, audio, video, Q&A
-        }
-    }
-##Likes Page
-    1. Post liked
-    2. Info total liked 
-    3. Own Posts publications. [ connect to **PostPage**]
-#### Button creatorPosts 
-    - Text, photos, gifs, quotes, chats, audio, video, Q&A
-##Inbox [ not too important ]
+## Likes Page
+     - [ ] 1. Post liked
+     - [ ] 2. Info total liked 
+     - [ ] 3. Button: Own Posts. `To PostPage` or `Blog page`.
 
-##Flash Notifications  [ not too important ]
-    - scroll down bar
+## Follow Page
+    - [ ] 1. Following posts.
+    - [ ] 2. Button delete follow.
+    - [ ] 3. Search option.
 
-## Acount Info - Preferences  [ not too important ]
+## Followers Page
+    - [ ] 1. Followers posts.
+    - [ ] 2. Button block follower. `Bonus`
+    - [ ] 3. Button to Follow.
     
+## Blog Page
+    - [ ] 1. Blog Name.  
+    - [ ] 2. User Name.
+    - [ ] 3. Body of own Posts.
 
-
-##Close Session
+> `BONUS` Close Session & Blog Page.
