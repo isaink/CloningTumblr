@@ -27,6 +27,9 @@
  - `GET`
     - get all post by that tag.
         `influers/tagged/{tag}`
+ - `POST` 
+   - add a new tag to post.
+      `influers/tagged/{tag}`
 
 ### Likes
  - `GET`
@@ -77,6 +80,9 @@
  - `DELETE`
     - Delete follows & stop following.
         `influers/following` & `influers/followers`
+ - `POST` 
+   - add a new followed & follower.
+       `influers/following` & `influers/followers`
 
 ### Search
  - `GET`   

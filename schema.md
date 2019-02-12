@@ -46,20 +46,24 @@ name              | data type |       details
 ------------------|-----------|-------------------
 `id `               |   integer |    not null, primary key
 `liked_posts(id) `  |   integer |    not null, foreign key
-`likes_counter(id`)| integer    |    not null, foreign key
 > likes belog to post and to users.
->  user have likes_counter(id).
+>  user have likes_counter(id) is prefered to use COUNT on Selecting instead of new data in table.
 
 ### Follows
 name              | data type |       details
 ------------------|-----------|-------------------
 `id  `              |  integer  |   not null, primary key
-`user(id)`          |  integer  |   not null, foreign key
-> Follows belog to users.
+`followed_id`          |  integer  |   not null, foreign key
+`follower_id`          |  integer  |   not null, foreign key
 
-### Followers
+> Follows belog to users.  Followed & Follower are references to USER(ID).
+
+### Search
 name              | data type |       details
 ------------------|-----------|-------------------
-`id  `              |  integer  |   not null, primary key
-`user(id)`          |  integer  |   not null, foreign key
-> Followers belog to users.
+`id  `             |  integer  |   not null, primary key
+`tag(id)`          |  integer  |   null, foreign key
+`user(id)`         |  integer  |   null, foreign key
+`follows(id)`      |  integer  |   null, foreign key
+
+> Search have tag, user, follows
