@@ -1,12 +1,14 @@
 DROP DATABASE IF EXISTS influers;
+
 CREATE DATABASE influers;
 
-\c influers
+\c influers;
 
 -- Users
 CREATE TABLE users (
   id SERIAL PRIMARY KEY,
   username VARCHAR UNIQUE NOT NULL,
+  password_digest VARCHAR NOT NULL,
   blogname VARCHAR UNIQUE,
   email VARCHAR UNIQUE NOT NULL,
   profile_pic VARCHAR
@@ -28,9 +30,9 @@ CREATE TABLE posts (
     author INT REFERENCES users(id) ON DELETE SET NULL,
     title VARCHAR NOT NULL,
     body VARCHAR NOT NULL,
-    img VARCHAR,
     blog INT REFERENCES blog(id) ON DELETE CASCADE,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    post_type VARCHAR
 );
 
 --Tag
@@ -67,8 +69,9 @@ VALUES('isa', 'inksmindsblog', '@SASDS.com', 'https://jojotastic.com/wp-content/
 INSERT INTO blog (blogger, header_pic, brand_blog, intro_text)
 VALUES(1, 'https://66.media.tumblr.com/avatar_0571f945536a_128.pnj', NULL, 'hello there, welcome~');
 
-INSERT INTO posts (author, title, body, img, blog, created_at)
-VALUES(1, 'Crossfire', 'I would trade my luck to know, Why he is caught in the crossfire', 'https://i.ytimg.com/vi/isL-5S0ihaY/maxresdefault.jpg', 1, '2019-02-12 05:30:15'),( 2, 'Crossfire', 'I would trade my luck to know, Why he is caught in the crossfire', 'https://i.ytimg.com/vi/isL-5S0ihaY/maxresdefault.jpg', 1, '2019-02-12 05:30:15');
+INSERT INTO posts (author, title, body, blog, created_at, post_type)
+VALUES(1, 'Crossfire', 'I would trade my luck to know, Why he is caught in the crossfire', 1, '2019-02-12 05:30:15', 'text'),
+( 2, 'inspired by @aka-outwork and tommy hilfiger fall 2017', 'https://66.media.tumblr.com/23fbcb648f0bf15423c9d8b2aa4be03a/tumblr_pjwdhmEv571rll77uo1_1280.png', 1, '2019-02-12 05:30:15', 'img');
 
 INSERT INTO tags (tagname, post)
 VALUES('music', 1), ('crossfire', 1),('lyric', 1);

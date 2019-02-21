@@ -1,0 +1,58 @@
+hr.line {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.icon{
+    height: 50px;
+    /* padding-bottom: 20px; */
+}
+.home {
+    height: 30px;
+}
+.follows{
+    height: 30px;
+   
+}
+.followers{
+    height: 50px;
+}
+.account{
+    height: 30px;
+}
+
+.nav_LogIn {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    padding-left: 20px;
+        /* background: white; */
+    /* background: #a4acb5; */
+}
+.logo{
+    /* font-family: 'Satisfy', cursive; */
+    font-family: 'Vollkorn', serif;    
+    font: bold;
+    color: white;
+    font-size: 30px;   
+}
+.search{
+    height: 30px;
+    outline: none;
+    width: 500px;
+    background: url(../img/search.png);
+    top: 10px;
+    left: 10px;
+    background: rgba(0,0,0,.13);
+}
+input{
+    margin-left: 20px;
+    border-radius: 5px; 
+    /* border: 1px solid #aaa; */
+    border: rgba(0,0,0,.13);
+}
+/* :placeholder-shown{
+    margin-left: 20px;
+} */

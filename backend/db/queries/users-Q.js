@@ -1,4 +1,5 @@
 const { db } = require('./connector.js');  //connecting to the database
+const authHelpers = require("../auth/helpers");
 
 // GET -> Get a single user info -> /influers/user/:id 
 const getUser = (req, res, next) => {
@@ -31,6 +32,44 @@ const addUser = (req, res, next) => {
     })
 };
 
+// POST -> Create a user  -> USER AUTH
+const createUser = (req, res, next) => {
+    const hash = authHelpers.createHash(req.body.password);
+
+    db.none(
+      "INSERT INTO users (username, password_digest) VALUES (${username}, ${password_digest})",
+      { username: req.body.username, password_digest: hash }
+    ).then(() => {
+        res.status(200).json({
+          message: "Registration successful."
+        });
+    }).catch(err => {
+        res.status(500).json({
+          message: err
+        });
+    });
+};
+
+// LOG OUT USER for ** USER AUTH **
+const logoutUser = (req, res, next) => {
+    req.logout();
+    res.status(200).send("log out success");
+};
+
+// LOG IN USER for ** USER AUTH **
+const loginUser = (req, res)=> {
+    res.json(req.user);
+};
+
+// IS LOGGED IN for ** USER AUTH **
+const isLoggedIn = (req, res) => {
+    if (req.user) {
+      res.json({ username: req.user });
+    } else {
+      res.json({ username: null });
+    }
+};
+
 // PATCH -> Edit user account -> /influers/user/:id
 const updateUser = (req, res, next) => {
     db.none('UPDATE users SET username=${username},  blogname=${blogname}, email=${email}, profile_pic=${profile_pic} WHERE id=${id}', {
@@ -38,7 +77,6 @@ const updateUser = (req, res, next) => {
         username: req.body.username,
         blogname: req.body.blogname,
         email: req.body.email,
-    
         profile_pic: req.body.profile_pic,
     }).then(() => {
         res.status(200).json({
@@ -66,4 +104,24 @@ const deleteUser  = (req, res, next) => {
     })
 };
 
-module.exports = { getUser, addUser, updateUser, deleteUser }
+const getPic = (req, res, next) => {
+    const porfileId = Number(req.params.id);
+    db.one('SELECT profile_pic FROM users WHERE id=$1', [userId])
+    .then((user) => {
+        res.status(200).json({
+        status: 'Success',
+        message: 'Got a profile picture',
+        body: user
+        })
+    }).catch(err => {
+    console.log("Error retrieving profile picture: ", err)
+    return next(err)
+    })
+};
+
+module.exports = { 
+    getUser,  
+    createUser: createUser,
+    logoutUser: logoutUser,
+    loginUser: loginUser,
+    isLoggedIn: isLoggedIn, addUser, updateUser, deleteUser, getPic }

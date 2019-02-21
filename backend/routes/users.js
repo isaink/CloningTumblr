@@ -1,15 +1,33 @@
 var express = require('express');
 var router = express.Router();
-const { 
+
+const {
   getUser, 
+  createUser,
+  logoutUser, 
+  loginUser, 
+  isLoggedIn,
   addUser, 
   updateUser, 
-  deleteUser } = require('../db/queries/users-Q')
+  deleteUser,
+  getPic
+} = require('../db/queries/users-Q')
+
+const passport = require("../auth/local");
+const { loginRequired } = require("../auth/helpers");
 
 //Getting Routes...
 router.get('/users/:id', getUser);
-router.post('/users', addUser );
+router.get('/users/dashboard', getPic);
+router.post('/users', addUser);
 router.patch('/users/:id', updateUser);
 router.delete('/users/:id', deleteUser);
+
+// Routes for user AUTH
+router.post("/new", createUser);
+router.post("/login", passport.authenticate("local", {}), loginUser);
+router.get("/isLoggedIn", isLoggedIn);
+router.post("/logout", loginRequired, logoutUser);
+
 
 module.exports = router;

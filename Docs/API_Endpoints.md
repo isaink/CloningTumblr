@@ -75,15 +75,15 @@
 ### Follows
  - `GET`
     - get the users that user follow.
-        `influers/following`
+        `influers/follows`
     - get the user followers.
         `influers/followers`
  - `DELETE`
     - Delete follows & stop following.
-        `influers/following` & `influers/followers`
+        `influers/follows` & `influers/followers`
  - `POST` 
    - add a new followed & follower.
-       `influers/following` & `influers/followers`
+       `influers/follows` & `influers/followers`
 
 ### Search
  - `GET`   

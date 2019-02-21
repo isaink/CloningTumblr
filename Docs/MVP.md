@@ -10,10 +10,17 @@ Is an Full-Stack App built with Express, React and Redux. It's a social media fo
 Gives the idea of accessibility infinite-trend for users-fans thru visual contents on scroll endless.
 > This is a clone of Tumblr.
 
+### USER PERSONA: 
+
+`Name:` Isa
+`Demographic Info: ` Adult latin NewYorker with interest on ilustrations, art, and code but doesn't know where to find creative people with good conents. 
+`Pain Points:`  Makes connection with creative contents and users. Like follow, likes and share info . 
+`Potential Solutions: ` Have available to the user buttons to likes each content also their are able to follow.
+
 ### Brand Idea: 
 Using symbol of Inifinite.
 Visual Interface...
-Colors Palette: --
+Colors Palette: -- dark blue & white 
 
 ## Minimum viable product Follows:
   - **Project Structure:** 

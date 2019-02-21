@@ -8,9 +8,9 @@ const getSearchResults = (req, res, next) => {
 };
 
 //UPDATE -> update your search  -> influers/searching/{name}
-const updateSearch (req, res, next)=> {
+// const updateSearch (req, res, next)=> {
 
-};
+// };
 module.exports = { getSearchResults,  }
 
 // ------------- B O N U S----------------
