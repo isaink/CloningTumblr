@@ -63,8 +63,8 @@ CREATE TABLE search (
     tags INT REFERENCES tags(id) ON DELETE SET NULL
 );
 
-INSERT INTO users (username, blogname, email, profile_pic)
-VALUES('isa', 'inksmindsblog', '@SASDS.com', 'https://jojotastic.com/wp-content/uploads/2018/08/jojotastic-Minimalist-Living-Tips-Resources-2.jpg'), ('adiuska', 'timeboom', 'dfakjfk@com.org','https://static.boredpanda.com/blog/wp-content/uploads/2015/05/cute-minimalist-illustrations-jaco-haasbroek-41.jpg'), ('Mongie', 'blog', '@fdsg.com','http://fallfordiy.com//wp-content/uploads/2016/12/DIY-Cork-Garland-with-Dulux-@fallfordiy-3.jpg');
+INSERT INTO users (username, password_digest, blogname, email, profile_pic)
+VALUES('isa', 10294,'inksmindsblog', '@SASDS.com', 'https://jojotastic.com/wp-content/uploads/2018/08/jojotastic-Minimalist-Living-Tips-Resources-2.jpg'), ('adiuska', 'sad1r45', 'timeboom', 'dfakjfk@com.org','https://static.boredpanda.com/blog/wp-content/uploads/2015/05/cute-minimalist-illustrations-jaco-haasbroek-41.jpg'), ('Mongie', 'sad1094','blog', '@fdsg.com','http://fallfordiy.com//wp-content/uploads/2016/12/DIY-Cork-Garland-with-Dulux-@fallfordiy-3.jpg');
 
 INSERT INTO blog (blogger, header_pic, brand_blog, intro_text)
 VALUES(1, 'https://66.media.tumblr.com/avatar_0571f945536a_128.pnj', NULL, 'hello there, welcome~');

@@ -3,7 +3,7 @@ const LocalStrategy = require("passport-local").Strategy;
 const init = require("./passport"); 
 const helpers = require("./helpers");
 
-const { db } = require('./connector.js');  //connecting to the database
+const { db } = require('./../db/queries/connector'); //connecting to the database
 
 passport.use(
   new LocalStrategy((username, password, done) => {

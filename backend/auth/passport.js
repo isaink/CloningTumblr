@@ -1,5 +1,5 @@
 const passport = require("passport");
-const { db } = require('./connector.js');  //connecting to the database
+const { db } = require('./../db/queries/connector'); //connecting to the database 
 
 module.exports = () => {
     passport.serializeUser((user, done) => {

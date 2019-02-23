@@ -4,13 +4,8 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
-import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
-import thunk from 'redux-thunk'
-import logger from 'redux-logger'
-import RootReducer from './reducers/RootReducer'
-
-const store = createStore(RootReducer, {}, applyMiddleware(thunk, logger))
+import store from './store/store.js';
 
 ReactDOM.render(
     <Provider store={store} >

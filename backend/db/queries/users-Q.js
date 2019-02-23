@@ -1,5 +1,5 @@
 const { db } = require('./connector.js');  //connecting to the database
-const authHelpers = require("../auth/helpers");
+const authHelpers = require("./../../auth/helpers");
 
 // GET -> Get a single user info -> /influers/user/:id 
 const getUser = (req, res, next) => {
@@ -35,15 +35,16 @@ const addUser = (req, res, next) => {
 // POST -> Create a user  -> USER AUTH
 const createUser = (req, res, next) => {
     const hash = authHelpers.createHash(req.body.password);
-
+    console.log(req.body)
     db.none(
-      "INSERT INTO users (username, password_digest) VALUES (${username}, ${password_digest})",
-      { username: req.body.username, password_digest: hash }
+      "INSERT INTO users (username, password_digest, email) VALUES (${username}, ${password_digest}, ${email})",
+      { username: req.body.username, password_digest: hash, email: req.body.email }
     ).then(() => {
         res.status(200).json({
           message: "Registration successful."
         });
     }).catch(err => {
+        console.log(err)
         res.status(500).json({
           message: err
         });
@@ -121,7 +122,12 @@ const getPic = (req, res, next) => {
 
 module.exports = { 
     getUser,  
-    createUser: createUser,
-    logoutUser: logoutUser,
-    loginUser: loginUser,
-    isLoggedIn: isLoggedIn, addUser, updateUser, deleteUser, getPic }
+    createUser,
+    logoutUser,
+    loginUser,
+    isLoggedIn, 
+    addUser, 
+    updateUser, 
+    deleteUser, 
+    getPic 
+}
