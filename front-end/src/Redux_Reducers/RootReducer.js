@@ -4,5 +4,5 @@ import { sessionStarting  } from './userAuthReducer';
 
 export default combineReducers({
     img: randomBgReducer,
-    userAuth: sessionStarting 
+    userAuth: sessionStarting  // will be the key on the state.
 });

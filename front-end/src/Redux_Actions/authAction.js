@@ -11,18 +11,25 @@ export const receiveUserAuth = ( user ) => {
 };
 
 export const newUser = ( user ) => dispatch => {
-    return axios.post('/new', user)
+    return axios.post('/users/new', user)
     .then( res => {
-        console.log(res)
-        return dispatch(receiveUserAuth(res.data.user))
+        // console.log(res)
+        // debugger
+        return dispatch(receiveUserAuth(null))
+        // return dispatch(logInUser(res.data.email))
+    })
+    .catch(err => {
+        console.log(err)
     })
 };
 
 export const logInUser = ( user ) =>  dispatch => {
-    return axios.post('/login', user)
+    debugger
+    return axios.post('/users/login', user)
     .then( res => {
-        Auth.authenticateUser( res.data.email);
-        return dispatch(receiveUserAuth(res.data.email))
+        debugger
+        Auth.authenticateUser( res.data.email ); // This email is saved into the localstorage
+        return dispatch(receiveUserAuth(res.data))
     })
     .catch((err) => {
         Auth.deauthenticateUser(); // is going to the localstorage and removing the token (token = user)
@@ -30,7 +37,7 @@ export const logInUser = ( user ) =>  dispatch => {
 };
 
 export const LogOutUser = ( ) =>  dispatch => {
-    return axios.post('/logout')
+    return axios.post('/users/logout')
     .then(() => {
         Auth.deauthenticateUser();
         return dispatch(receiveUserAuth(null))
@@ -40,20 +47,25 @@ export const LogOutUser = ( ) =>  dispatch => {
     })
 };
 
-export const checkAuthenticateStatus = ( {isLoggedIn, username  }) => dispatch => { // talk to Reed about it
-    return axios.get('/isLoggedIn')
+export const checkAuthenticateStatus = () => dispatch => { 
+    return axios.get('/users/isLoggedIn')
     .then(user => {
         if (user.data.username === Auth.getToken()) {
-            return dispatch({ 
+            debugger
+            return dispatch({ // test  // talk to Reed about it
+                receive: receiveUserAuth(user.data.email),
                 isLoggedIn: Auth.isUserAuthenticated(),
                 username: Auth.getToken()
             })
         }else{
-            if (user.data.username) {
-                this.props.logoutUser();
+            if (user.data.email) {
+                LogOutUser();
             } else {
                 Auth.deauthenticateUser();
             }
         }
     })
-}
+    .catch( err => {
+        Auth.deauthenticateUser();
+    })
+};

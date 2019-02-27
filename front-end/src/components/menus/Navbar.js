@@ -9,19 +9,9 @@ let account = require('../../img/account.png');
 let follows = require('../../img/follows1.png');
 let followers = require('../../img/followers1.png');
 
-// Inside account I will have links to Likes and Blog 
-
-export const Nav = () => {
+export const Nav = () => { // Inside account I will have links to Likes and Blog 
     return (
         <> 
-            {/* { navs.length 
-            ? 
-            <>
-            </>
-            :
-            <>
-            </>    
-            } */}
             <div className='nav_LogIn'>
 
                 <NavRegister />

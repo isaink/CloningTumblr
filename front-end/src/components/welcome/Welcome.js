@@ -8,11 +8,11 @@ import './../../css/welcome.css';
 
 class Welcome extends React.Component  {
     state = {
-        // match: '',
-        isLoggedin: false,
-        startUp: '',
-        user: '',
-        img: '',
+        username: '',
+        password: '',
+        email: '',
+        startUp: '',    // toggle switch statement
+        img: '',        // for the background
     };
 
     handleSignUp = (e) => {
@@ -21,12 +21,26 @@ class Welcome extends React.Component  {
         })
     };
 
+    handleChange = (event) => {
+      this.setState({
+        [event.target.name]: event.target.value 
+      })
+    };
+
+    handleSubmission = async (event) => {
+      event.preventDefault();
+      let { username, password,  email} = this.state;
+
+      // CALL REDUX ACTION AFTER
+      await this.props.newUser({ username, password, email });
+      await this.props.logInUser({ username, password }); // this state have to macth with the backend router
+    }; 
 
     // registerUser = async e => {
     //     e.preventDefault();
     //     const { username, password, email } = this.state;
     
-    //     await axios.post("/users/new", { username, password, email });
+    //     await axios.post("/new", { username, password, email });
 
     //     Auth.authenticateUser(username);
     
@@ -61,24 +75,32 @@ class Welcome extends React.Component  {
     // };
 
     renderForm = () => {
+      console.log('WELCOME PROPS',this.props)
       switch(this.state.startUp){
         case false :
           return (
             <>
-              <LogInForm loginUser={this.loginUser} handleChange={this.handleChange} />
+              <LogInForm loginUser={this.loginUser} />
             </>
         )
         case true:
         return (
             <>
-               <SignUpForm registerUser={this.registerUser} email={this.email} password={this.password} username={this.username} handleChange={this.handleChange} />
+               <SignUpForm 
+                startUp={this.startUp}
+                email={this.state.email}
+                password={this.state.password} 
+                username={this.state.username} 
+                handleChange={this.handleChange} 
+                handleSubmission={this.handleSubmission }
+              />
             </> 
         )
         default : 
           return (
             <>  
               <div className='button_welcome'>
-                <button type='submit' className='start' onClick={this.handleRegister}>
+                <button type='submit' className='start' onClick={this.handleSignUp}>
                     Get Started
                 </button >
 
@@ -93,7 +115,6 @@ class Welcome extends React.Component  {
 
     componentDidMount(){
         this.props.fetchRandomBG()
-        // this.props.checkAuthenticateStatus()
     };
 
    render(){
@@ -115,6 +136,6 @@ class Welcome extends React.Component  {
       </>
     )
   }
-}    
+};    
 
 export default Welcome;

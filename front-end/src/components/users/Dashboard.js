@@ -1,6 +1,5 @@
 // import '../css/Home.css';
 import React from 'react';
-import axios from 'axios';
 let text = require('./../../img/a.png');
 
 export default class Dashboard extends React.Component {
@@ -8,18 +7,18 @@ export default class Dashboard extends React.Component {
         pic: '',
     };
 
-    getPic = () => {
-        axios.get('http://localhost:3000/dashboard')
-        .then((res) => {
-            console.log(res)
-            this.setState({
-                // img: res.data.body.body 
-            })
-        })
-    };
+    // getPost = () => {
+    //     axios.get('http://localhost:3000/dashboard')
+    //     .then((res) => {
+    //         console.log(res)
+    //         this.setState({
+    //             // img: res.data.body.body 
+    //         })
+    //     })
+    // };
 
     componentDidMount(){
-        this.getPic()
+        // this.getPic()
     };
 
     handleClick = (e) => {

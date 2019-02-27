@@ -2,25 +2,17 @@ import React from 'react';
 import './../../css/welcome.css';
 
 export default class LogInForm extends React.Component {
-    state = {
-        email: '',
-        password: '',
-    };
-    
-    handleChange = e => {
-        this.setState({
-          [e.target.name]: e.target.value
-        });
-    };
-    
+
     render(){
         return (
             <>
                 <form onSubmit={this.props.loginUser}> 
-                    <input name='email' placeholder='Email' onChange={this.props.handleChange} />
-                    <input name='password' placeholder='Password' />
+                    <input name='email' value={this.props.email} placeholder='Email' onChange={this.props.handleChange} />
+                    <input name='password' value={this.props.password} placeholder='Password' onChange={this.props.handleChange} />
+                    
                     <button type='submit'>Log In</button>
                 </form>
+
             </>
         )
     }
