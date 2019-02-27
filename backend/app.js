@@ -37,10 +37,10 @@ app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Getting router indentification:
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/influers', usersRouter);  //getting dashboard
-app.use('/influers', randomImg );
+app.use('/', indexRouter);  // this show Express title in Page
+app.use('/users', usersRouter); 
+// app.use('/influers', usersRouter);  //getting dashboard
+app.use('/welcome', randomImg );
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

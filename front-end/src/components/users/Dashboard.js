@@ -1,8 +1,7 @@
 // import '../css/Home.css';
 import React from 'react';
 import axios from 'axios';
-// import { } from './post/postCreator'
-let text = require('./../img/a.png');
+let text = require('./../../img/a.png');
 
 export default class Dashboard extends React.Component {
     state = {
@@ -10,7 +9,7 @@ export default class Dashboard extends React.Component {
     };
 
     getPic = () => {
-        axios.get('http://localhost:3000/influers/dashboard')
+        axios.get('http://localhost:3000/dashboard')
         .then((res) => {
             console.log(res)
             this.setState({

@@ -19,7 +19,7 @@ const { loginRequired } = require("./../auth/helpers");
 //Getting Routes...
 router.get('/users/:id', getUser);
 router.get('/users/dashboard', getPic);
-router.post('/users', addUser); // this isn't need it anymore now to I will use CREATE USER 
+router.post('/users', addUser); // this isn't need it anymore, I will use CREATE USER 
 router.patch('/users/:id', updateUser);
 router.delete('/users/:id', deleteUser);
 

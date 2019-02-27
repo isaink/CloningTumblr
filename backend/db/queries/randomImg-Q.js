@@ -6,8 +6,9 @@ const getRandomImg = (req, res, next) => {
         res.status(200).json({  
             status: 'Sucess',
             message: 'Got random Image',
-            body: post
+            post: post
         })
+        console.log( getRandomImg(), "randomimg")
     }).catch(err => {
         console.log("Error retrieving a random Image ", err)
         return next(err)

@@ -8,7 +8,7 @@ const getPosts = (req, res, next) => {
         res.status(200).json({
             status: 'Success',
             message: 'Got all Posts',
-            body: post
+            post: post
         })
     }).catch(err => {
         console.log('Error retrieving all posts', err)
@@ -30,7 +30,7 @@ const getPostbytypeImg = (req, res, next) => {
         res.status(200).json({  
             status: 'Sucess',
             message: 'Got random Image',
-            body: post
+            post: post
         })
     }).catch(err => {
         console.log("Error retrieving a random Image ", err)
