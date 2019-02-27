@@ -18,7 +18,7 @@ export const newUser = ( user ) => dispatch => {
     })
 };
 
-export const LogInUser = ( user ) =>  dispatch => {
+export const logInUser = ( user ) =>  dispatch => {
     return axios.post('/login', user)
     .then( res => {
         Auth.authenticateUser( res.data.email);

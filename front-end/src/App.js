@@ -5,7 +5,7 @@ import './App.css';
 
 import { Nav } from './components/menus/Navbar';
 import Dashboard from './components/users/Dashboard';
-import WelcomeContainer from './containers/WelcomeContainer';
+import WelcomeContainer from './Redux_Containers/WelcomeContainer';
 import { AuthRouter, PrivateRoute }  from './components/utils/AuthRouting';
 
 class App extends Component {
