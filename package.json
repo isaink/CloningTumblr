@@ -1,0 +1,21 @@
+{
+  "name": "cloningtumblr",
+  "version": "1.0.0",
+  "description": "Is an Full-Stack App built with Express, React and Redux.",
+  "main": "index.js",
+  "scripts": {
+    "start": " node backend/bin/www/ ",
+    "heroku-prostbuild" : "cd backend && npm install && cd ../front-end && npm install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaink/CloningTumblr.git"
+  },
+  "author": "Isa Alvarado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/isaink/CloningTumblr/issues"
+  },
+  "homepage": "https://github.com/isaink/CloningTumblr#readme"
+}

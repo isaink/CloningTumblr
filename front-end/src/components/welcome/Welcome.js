@@ -80,18 +80,25 @@ class Welcome extends React.Component  {
         case false :
           return (
             <>
-              <LogInForm loginUser={this.loginUser} />
+              <LogInForm 
+                loginUser={this.loginUser}
+                email={this.state.email}
+                password={this.state.email}
+                handleChange={this.handleChange}
+                handleSubmission={this.handleSubmission}
+                startUp={this.startUp}
+              />
             </>
         )
         case true:
         return (
             <>
                <SignUpForm 
-                startUp={this.startUp}
                 email={this.state.email}
                 password={this.state.password} 
                 username={this.state.username} 
                 handleChange={this.handleChange} 
+                startUp={this.startUp}
                 handleSubmission={this.handleSubmission }
               />
             </> 
