@@ -13,8 +13,6 @@ export const receiveUserAuth = ( user ) => {
 export const newUser = ( user ) => dispatch => {
     return axios.post('/users/new', user)
     .then( res => {
-        // console.log(res)
-        // debugger
         return dispatch(receiveUserAuth(null))
         // return dispatch(logInUser(res.data.email))
     })

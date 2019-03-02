@@ -11,16 +11,22 @@ class Welcome extends React.Component  {
         username: '',
         password: '',
         email: '',
-        startUp: '',    // toggle switch statement
+        startUp: '',    // toggleForms switch statement
         img: '',        // for the background
     };
 
     handleSignUp = (e) => {
-        this.setState({
-            startUp: true
-        })
+      this.setState({
+        startUp: true
+      })
     };
 
+    handleLogIn = (e) => {
+      this.setState({
+        startUp: false
+    })
+
+    }
     handleChange = (event) => {
       this.setState({
         [event.target.name]: event.target.value 
@@ -111,7 +117,7 @@ class Welcome extends React.Component  {
                     Get Started
                 </button >
 
-                <button type='submit' className='log_in' >
+                <button type='submit' className='log_in' onClick={this.handleLogIn}>
                   Log In
                 </button>
               </div>

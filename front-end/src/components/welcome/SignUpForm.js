@@ -10,12 +10,6 @@ export default class SignUpForm extends React.Component {
         
         return (
             <>
-                {/* <div className='welcome_saludo'>
-                    <h2>Influers </h2>
-                    <p>Come for what you love.
-                    <br /> Stay for what you discover.</p>  
-                </div> */}
-
                 <form className='form_register' onSubmit={handleSubmission} >
                     <input className='' 
                         name='email' 

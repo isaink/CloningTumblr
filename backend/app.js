@@ -35,6 +35,10 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(express.static(path.join(__dirname, 'public')));
+// app:use(express.static(path.join(__dirname, "../front-end/build"))); // is for Hekoru App 
+console.log("this is __dirname", __dirname)
+
+// app.use("*" )
 
 //Getting router indentification:
 app.use('/', indexRouter);  // this show Express title in Page

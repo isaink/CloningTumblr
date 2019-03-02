@@ -36,9 +36,11 @@ hr.line {
     font-family: 'Vollkorn', serif;    
     font: bold;
     color: white;
-    font-size: 30px;   
+    font-size: 30px;  
+    background-color: rgba(0,0,0,0.1); 
 }
-.search{
+
+.search {
     height: 30px;
     outline: none;
     width: 500px;
@@ -56,3 +58,8 @@ input{
 /* :placeholder-shown{
     margin-left: 20px;
 } */
+
+.i{
+    
+
+}

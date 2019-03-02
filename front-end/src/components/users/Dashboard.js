@@ -4,21 +4,10 @@ let text = require('./../../img/a.png');
 
 export default class Dashboard extends React.Component {
     state = {
-        pic: '',
+        posts: '',
     };
 
-    // getPost = () => {
-    //     axios.get('http://localhost:3000/dashboard')
-    //     .then((res) => {
-    //         console.log(res)
-    //         this.setState({
-    //             // img: res.data.body.body 
-    //         })
-    //     })
-    // };
-
     componentDidMount(){
-        // this.getPic()
     };
 
     handleClick = (e) => {
@@ -45,7 +34,6 @@ export default class Dashboard extends React.Component {
                 </div>
                 
             </div>
-    
             </>
         )
     }
