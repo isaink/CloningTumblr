@@ -4,7 +4,7 @@ import { Switch } from 'react-router-dom';
 import './App.css';
 
 import Nav from './components/menus/Navbar';
-import Dashboard from './components/users/Dashboard';
+import Dashboard from './components/board/Dashboard';
 import WelcomeContainer from './Redux_Containers/WelcomeContainer';
 import { AuthRouter, PrivateRoute }  from './components/utils/AuthRouting';
 
@@ -21,7 +21,7 @@ class App extends Component {
                 path="/dashboard" 
                 component={Dashboard} 
                 logOutUser={this.props.LogOutUser}
-                
+
               />
               <AuthRouter exact path="/" component={WelcomeContainer} />
               <AuthRouter exact path="/login" component={WelcomeContainer} />

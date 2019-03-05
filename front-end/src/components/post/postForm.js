@@ -1,7 +1,7 @@
 import React from 'react';
 let username = './db/'
 
-export const postNav = ({ onChange }) => {
+const postForm = ({ onChange }) => {
     return (
         <>  
             <img className='' /> {/*  pic user*/}
@@ -19,3 +19,4 @@ export const postNav = ({ onChange }) => {
         </>
     )
 }
+export default postNav

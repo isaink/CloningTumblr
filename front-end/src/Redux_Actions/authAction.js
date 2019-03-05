@@ -22,10 +22,9 @@ export const newUser = ( user ) => dispatch => {
 };
 
 export const logInUser = ( user ) =>  dispatch => {
-    debugger
     return axios.post('/users/login', user)
     .then( res => {
-        debugger
+
         Auth.authenticateUser( res.data.email ); // This email is saved into the localstorage
         return dispatch(receiveUserAuth(res.data))
     })
@@ -49,7 +48,7 @@ export const checkAuthenticateStatus = () => dispatch => {
     return axios.get('/users/isLoggedIn')
     .then(user => {
         if (user.data.username === Auth.getToken()) {
-            debugger
+            console.log('REACHED AUTHENTICATE', user.data)
             return dispatch({ // test  // talk to Reed about it
                 receive: receiveUserAuth(user.data.email),
                 isLoggedIn: Auth.isUserAuthenticated(),
