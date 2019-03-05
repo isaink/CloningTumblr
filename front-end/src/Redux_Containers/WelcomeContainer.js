@@ -1,9 +1,7 @@
 import { connect } from 'react-redux';
 import { fetchRandomBG } from '../Redux_Actions/postsAction';
 import { newUser, logInUser } from '../Redux_Actions/authAction'; 
-
 import  Welcome from '../components/welcome/Welcome';
-// import DashBoard from './../components/users/Dashboard';
 
 const mapStateToProps = (state) => {
     return { 

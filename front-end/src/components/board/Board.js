@@ -3,8 +3,9 @@ import PostNav from './../post/postNav';
 import './../../css/board.css';
 
 export default class Board extends Component {
-
+    
     render(){
+        console.log('BOARD PROPS', this.props)
         return (
             <>
                 <div className='container'>

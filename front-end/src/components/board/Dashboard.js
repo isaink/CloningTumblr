@@ -1,6 +1,7 @@
 
 import React, { Component } from "react";
 import Board from './Board';
+import BoardContainer from '../../Redux_Containers/BoardContainer';
 import './../../css/board.css';
 
 export default class Dashboard extends Component {
@@ -22,7 +23,7 @@ export default class Dashboard extends Component {
         return (
             <>  
                 <p>Welcome  Home </p>
-                <Board posts={posts} profile_pic={profile_pic}/>
+                <BoardContainer posts={posts}/>
             </>
         )
     }  
