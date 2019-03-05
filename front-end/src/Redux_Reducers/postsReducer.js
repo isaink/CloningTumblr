@@ -1,4 +1,4 @@
-import { RANDOM_BACKGROUND  } from '../Redux_Actions/actionPosts.js';
+import { RANDOM_BACKGROUND  } from '../Redux_Actions/postsAction';
 
 export const randomBgReducer = ( initialState = {}, action) => {
     Object.freeze(initialState);

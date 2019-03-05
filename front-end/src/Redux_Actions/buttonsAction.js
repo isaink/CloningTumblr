@@ -1,7 +1,9 @@
 export let TOGGLE = "TOGGLE";
 
-export const togglebuttons = () => {
+export const togglebuttons = (buttons) => {
     return{
       type: TOGGLE,
+      buttons: buttons
     }
   }
+  

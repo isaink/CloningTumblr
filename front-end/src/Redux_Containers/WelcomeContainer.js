@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchRandomBG } from '../Redux_Actions/actionPosts';
+import { fetchRandomBG } from '../Redux_Actions/postsAction';
 // import { sessionStarting } from '../Redux_Reducers/userAuthReducer';
 import { newUser, logInUser } from '../Redux_Actions/authAction'; 
 

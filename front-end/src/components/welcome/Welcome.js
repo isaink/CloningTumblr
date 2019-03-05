@@ -1,12 +1,9 @@
-import React from 'react';
-// import axios from 'axios';
-// import Auth from "../utils/Auth";
-
+import React, { Component } from "react";
 import LogInForm from './LogInForm';
 import SignUpForm from './SignUpForm'
 import './../../css/welcome.css';
 
-class Welcome extends React.Component  {
+class Welcome extends Component {
     state = {
         username: '',
         password: '',
@@ -22,11 +19,11 @@ class Welcome extends React.Component  {
     };
 
     handleLogIn = (e) => {
-      this.setState({
-        startUp: false
-    })
+        this.setState({
+          startUp: false
+      })
+    };
 
-    }
     handleChange = (event) => {
       this.setState({
         [event.target.name]: event.target.value 
