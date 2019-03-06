@@ -17,6 +17,22 @@ const getUser = (req, res, next) => {
     })
 };
 
+// GET -> Get info for user logged by email
+const getUserbyEmail = (req, res, next) => {
+    const gmailId = Number(req.params.id);
+    db.one('SELECT * FROM users WHERE "email" = gmail=$1', [gmailId])
+    .then((user) => {
+        res.status(200).json({
+        status: 'Success',
+        message: 'Got info for the user logged',
+        info: user
+        })
+    }).catch(err => {
+    console.log("Error retrieving info from the user logged: ", err)
+    return next(err)
+    })
+};
+
 // POST -> Create a user  -> /influers/users
 const addUser = (req, res, next) => {
     db.none('INSERT INTO users ( username, email)' + 
@@ -65,9 +81,9 @@ const loginUser = (req, res)=> {
 // IS LOGGED IN for ** USER AUTH **
 const isLoggedIn = (req, res) => {
     if (req.user) {
-      res.json({ email: req.user });
+      res.json({ user: req.user });
     } else {
-      res.json({ email: null });
+      res.json({ user: null });
     }
 };
 
@@ -122,6 +138,7 @@ const getPic = (req, res, next) => {
 
 module.exports = { 
     getUser,  
+    getUserbyEmail,
     createUser,
     logoutUser,
     loginUser,
