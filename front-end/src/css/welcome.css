@@ -3,7 +3,6 @@ p {
     font: bold;
 }
 h2 {
-    /* font-family: 'Satisfy', cursive; */
     font-family: 'Vollkorn', serif;
     font-size: 50px;
     color: white;
@@ -62,5 +61,4 @@ input{
     border-radius: 0;
     box-shadow: none;
     border: 0; 
-
 }

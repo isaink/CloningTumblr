@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import './../../css/account.css';
+
 let likes = require('./../../img/likes.png');
-let following = require('./../../img/followers.png');
 let post = require('./../../img/posts.ico');
 
 export default class Account extends Component {

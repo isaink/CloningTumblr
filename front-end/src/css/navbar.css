@@ -42,7 +42,9 @@ hr.line {
 .nav_LogIn {
     display: flex;
     justify-content: space-between;
-    padding-right: 10px;
+    padding-right: 20px;
+    padding-top: 10px;
+    height: 50px;
 }
 .logo{
     font-family: 'Vollkorn', serif;    
@@ -76,15 +78,20 @@ hr.line {
     margin-right: 16px;
     position: absolute;
     padding-left: 30px;
-    padding-top: 7px;
+    padding-top: 19px;
 }
 
 .logOut {
     height: 30px;
-    width: 50px;
+    width: 60px;
     background-color: white;
     border: none;
     margin: auto;
-    padding-left: 13px;
-    padding-right: 13px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 2px;
+    font-family: Helvetica Neue,HelveticaNeue,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+
 }

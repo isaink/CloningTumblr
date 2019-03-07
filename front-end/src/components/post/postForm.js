@@ -1,10 +1,9 @@
 import React from 'react';
-// let username = './db/'
 
 const postForm = ({ onChange }) => {
     return (
         <>  
-            <img className='' /> {/*  pic user*/}
+            <img alt='' className='' /> {/*  pic user*/}
             <div className='boxText'>
                 <p>userName</p>
                 <h1> Título </h1>
@@ -12,8 +11,8 @@ const postForm = ({ onChange }) => {
                     <input type='text' onChange={onChange} placeholder='Title'/>
                     <input type='text' onChange={onChange} placeholder='Your text here'/>
                     
-                    <button> Close </button>
-                    <button> Post </button>
+                    <button type='close' > Close </button>
+                    <button type='submit' > Post </button>
                 </form>
             </div>
         </>

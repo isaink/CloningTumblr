@@ -10,6 +10,11 @@
     /* background-color: white; */
     justify-items: stretch;
 }
+.postCreator {
+    display: grid;
+    grid-template-columns: 20% 20% 30% 30% ;
+    grid-gap: 5px;
+}
 
 .postFeed{
     grid-row: 2;
@@ -39,10 +44,27 @@ widgets {
     grid-column: 2;
     grid-column-end: 3;
     grid-row: 1;
+}
+
+.iconPost{
     background-color: #f4f8fc;
     width: 76px;
     height: 99px;
     border-radius: 5px;
 }
+
+.a{
+    grid-column: 1;
+    height: 48px;
+    width: 48px;
+    padding-top: 15px;
+}
+
+.camara{
+    padding-top: 15px;
+    grid-column: 2;
+    width: 50px;
+}
+
 
 

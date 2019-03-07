@@ -1,17 +1,18 @@
 import React, { Component } from "react";
-import './../../css/navbar.css';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { NavLeftSide } from './NavLeftSide';
+import './../../css/navbar.css';
 
 // let logo = require('../img/INFLUERS.png')
 let home = require('../../img/home2.png');
 let account = require('../../img/account.png');
 let follows = require('../../img/follows1.png');
 
-export class Nav extends Component {
+export default class Nav extends Component {
 
-    handleLogOutUser = () => {
-        this.props.LogOutUser();
+    handleLogOutUser = async () => {
+        await this.props.LogOutUser();
+        await this.props.checkAuthenticateStatus();
     };
 
     render(){
@@ -44,11 +45,11 @@ export class Nav extends Component {
                                 </Link>
                             </div>
                            
-                            <div className="logOut">
+                            {/* <div className="logOut"> */}
                                 <button onClick={this.handleLogOutUser} className="logOut" > 
-                                Log Out
+                                LogOut
                                 </button>
-                            </div>
+                            {/* </div> */}
                         </div>
                     }
                 </div>
