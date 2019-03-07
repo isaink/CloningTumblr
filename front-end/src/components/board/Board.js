@@ -1,15 +1,20 @@
 import React, { Component } from "react";
-import PostForm from './../post/postForm';
+// import PostForm from './../post/postForm';
 import './../../css/board.css';
+
 let a = require('./../../img/a.png');
 let camara = require('./../../img/camara.png')
 
 export default class Board extends Component {
 
-    
-    handlePostForm = (e) => { // When click to make post send this to top of the posts
-        // <PostForm />
-    };
+    // handlePostForm = (e) => { // When click to make post send this to top of the posts
+    //     return (
+    //         <>
+    //              <PostForm />
+    //         <>
+    //     )
+        
+    // };
 
     handleChangePostForm = () => {
 
@@ -21,7 +26,7 @@ export default class Board extends Component {
             <>
                 <div className='container'>
                         <div className="pic ">
-                            {/* <img src={ profile_pic } alt=""/> */}
+                            <img url='' className='profile' alt=""/>
                         </div>
 
                         <div className="nav">
@@ -41,11 +46,12 @@ export default class Board extends Component {
                             <post>posts</post>
                         </div>
 
-                        <widgets> widgets </widgets>
+                        <div className='widgets'> 
+                            widgets 
+                        </div>
                    
-                    <div className="content_creator">
-                        {/* <div className='a'> </div>*/}
-                    </div> 
+                    {/* <div className="content_creator">
+                    </div>  */}
                 </div>
             </>
         )

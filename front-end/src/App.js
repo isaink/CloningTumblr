@@ -13,27 +13,38 @@ import { AuthRouter, PrivateRoute }  from './components/utils/AuthRouting';
 class App extends Component {
 
   render() {
+    const {checkAuthenticateStatus, LogOutUser, logInUser, newUser} = this.props;
+
     return (
         <> 
           <div className="App">
-            <Nav />
+            <Nav 
+              logOutUser={LogOutUser}
+              checkAuthenticateStatus={checkAuthenticateStatus}
+            />
 
             <Switch >
               <PrivateRoute 
                 path="/dashboard" 
                 component={Dashboard} 
-                logOutUser={this.props.LogOutUser}
-
+                logOutUser={LogOutUser}
+                checkAuthenticateStatus={checkAuthenticateStatus}
               />
               <PrivateRoute path='/account'
-              component={Account}
+                component={Account}
+                logOutUser={LogOutUser}
+                checkAuthenticateStatus={checkAuthenticateStatus}
               />
               <PrivateRoute path='/follows'
-              component={Follows}
+                component={Follows}
+                logOutUser={LogOutUser}
+                checkAuthenticateStatus={checkAuthenticateStatus}
               />
-              <AuthRouter exact path="/" component={WelcomeContainer} />
-              <AuthRouter exact path="/login" component={WelcomeContainer} />
-              <AuthRouter exact path="/register" component={WelcomeContainer} />
+              <AuthRouter exact path="/" 
+                component={WelcomeContainer} 
+                logInUser={logInUser}
+                signUp={newUser}
+              />
             </Switch>
 
           </div>

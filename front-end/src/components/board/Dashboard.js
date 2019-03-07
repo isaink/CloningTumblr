@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Board from './Board';
+// import Board from './Board';
 import BoardContainer from '../../Redux_Containers/BoardContainer';
 import './../../css/board.css';
 
