@@ -1,67 +1,59 @@
-import React from 'react';
+import React, { Component } from "react";
 import './../../css/navbar.css';
 import {Link} from 'react-router-dom';
 import { NavLeftSide } from './NavLeftSide';
-import { connect } from 'react-redux'
 
 // let logo = require('../img/INFLUERS.png')
 let home = require('../../img/home2.png');
 let account = require('../../img/account.png');
 let follows = require('../../img/follows1.png');
 
-const Nav = ({ user, buttons, LogOutUser }) => { // Inside account I will have links to Likes and Blog 
+export class Nav extends Component {
 
-    console.log('NAV USER', user)
+    handleLogOutUser = () => {
+        this.props.LogOutUser();
+    };
 
-    // const handleLogOut = (e) => {
-    //     e.preventDefault();
-    // //    LogOutUser;
-    // };
+    render(){
+        console.log('NAV USER', this.props.user)
+        const { user } = this.props;
+
+        return (
+            <> 
+                <div className='nav_LogIn'>
     
-    return (
-        <> 
-            <div className='nav_LogIn'>
-
-                <NavLeftSide /> 
-
-                {user == null && 
-                    <div className="icons_leftside"> 
-                        <div className='icons' >
-                            <Link to='/dashboard'  >  
-                                <img className='  home' src={home} alt='' /> 
-                            </Link>
+                    <NavLeftSide /> 
+    
+                    {user == null && 
+                        <div className="icons_leftside"> 
+                            <div className='icons' >
+                                <Link to='/dashboard'  >  
+                                    <img className='  home' src={home} alt='' /> 
+                                </Link>
+                            </div>
+                            
+                            <div className='icons'>
+                                <Link to='/follows'  >  
+                                    <img className=' follows' src={follows} alt='' /> 
+                                </Link>
+                            </div>
+                            
+                            <div className='icons'>
+                                <Link to='/account'   >  
+                                    <img className=' account' src={account} alt='' /> 
+                                </Link>
+                            </div>
+                           
+                            <div className="logOut">
+                                <button onClick={this.handleLogOutUser} className="logOut" > 
+                                Log Out
+                                </button>
+                            </div>
                         </div>
-                        
-                        <div className='icons'>
-                            <Link to='/follows'  >  
-                                <img className=' follows' src={follows} alt='' /> 
-                            </Link>
-                        </div>
-                        
-                        <div className='icons'>
-                            <Link to='/account'   >  
-                                <img className=' account' src={account} alt='' /> 
-                            </Link>
-                        </div>
-                       
-                        <div className="logOut">
-                            <button onClick={handleLogOut} className="logOut" > 
-                            Log Out
-                            </button>
-                        </div>
-                    </div>
-                }
-            </div>
-            <hr className='line'/>
-        </>
-    )
-}
-
-const mapStateToProps = state => {
-    return {
-        user: state.userAuth.user,
-        buttons: state.toggleButtons.buttons
+                    }
+                </div>
+                <hr className='line'/>
+            </>
+        )
     }
 }
-
-export default connect(mapStateToProps, null)(Nav)

@@ -39,7 +39,6 @@ class Welcome extends Component {
     }
 
     handleLogOutUser = () => {
-      // let {}
       this.props.LogOutUser();
     }
 
@@ -64,7 +63,7 @@ class Welcome extends Component {
                 email={this.state.email}
                 password={this.state.password}
                 handleChange={this.handleChange}
-                handleLogginUser={ this.handleLogginUser }
+                handleLogginUser={ this.handleLogginUser}
               />
             </>
         )

@@ -17,7 +17,7 @@ export class NavLeftSide extends Component {
     };
 
     render() {
-        const {search} = this.state;
+        const { search } = this.state;
         return (
             <> 
                 <div>
