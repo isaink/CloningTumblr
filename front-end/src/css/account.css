@@ -1,0 +1,29 @@
+.box_account {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    grid-column-gap: 15px;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+.section{
+    background-color: white;
+    border-radius: 5px;
+    height: 100px;
+    /* width: ; */
+}
+
+
+
+.likes{
+    grid-row: 1;
+    height: 30px;
+
+}
+.post{
+    grid-row: 2;
+    height: 30px;
+}
+
+

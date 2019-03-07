@@ -8,17 +8,15 @@ import { connect } from 'react-redux'
 let home = require('../../img/home2.png');
 let account = require('../../img/account.png');
 let follows = require('../../img/follows1.png');
-let followers = require('../../img/followers1.png');
 
 const Nav = ({ user, buttons, LogOutUser }) => { // Inside account I will have links to Likes and Blog 
 
     console.log('NAV USER', user)
-    // const handleToggleButtons = (e) => { };
 
-    const handleLogOut = (e) => {
-        e.preventDefault();
-    //    LogOutUser;
-    };
+    // const handleLogOut = (e) => {
+    //     e.preventDefault();
+    // //    LogOutUser;
+    // };
     
     return (
         <> 
@@ -28,25 +26,29 @@ const Nav = ({ user, buttons, LogOutUser }) => { // Inside account I will have l
 
                 {user == null && 
                     <div className="icons_leftside"> 
-                        <Link to='/dashboard' >  
-                            <img className=' home' src={home} alt='' /> 
-                        </Link>
+                        <div className='icons' >
+                            <Link to='/dashboard'  >  
+                                <img className='  home' src={home} alt='' /> 
+                            </Link>
+                        </div>
                         
-                        <Link to='/follows' >  
-                            <img className='follows' src={follows} alt='' /> 
-                        </Link>
-
-                        <Link to='/followers'>
-                            <img className='followers' src={followers} alt='' /> 
-                        </Link>
-
-                        <Link to='/account' >  
-                            <img className='icon account' src={account} alt='' /> 
-                        </Link>
-
-                        <button onClick={handleLogOut} className="logOut"> 
-                        Log Out
-                        </button>
+                        <div className='icons'>
+                            <Link to='/follows'  >  
+                                <img className=' follows' src={follows} alt='' /> 
+                            </Link>
+                        </div>
+                        
+                        <div className='icons'>
+                            <Link to='/account'   >  
+                                <img className=' account' src={account} alt='' /> 
+                            </Link>
+                        </div>
+                       
+                        <div className="logOut">
+                            <button onClick={handleLogOut} className="logOut" > 
+                            Log Out
+                            </button>
+                        </div>
                     </div>
                 }
             </div>

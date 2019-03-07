@@ -27,7 +27,7 @@ router.get('/dasboard', getUserbyEmail );
 
 // Routes for user AUTH
 router.post("/new", createUser);
-router.post("/login", passport.authenticate("local", {}), loginUser);
+router.post("/login", passport.authenticate("local", {}), loginUser);``
 router.get("/isLoggedIn", isLoggedIn);
 router.post("/logout", loginRequired, logoutUser);
 

@@ -2,20 +2,13 @@ import React, { Component } from "react";
 import './../../css/navbar.css';
 import {Link} from 'react-router-dom';
 
-// let search = require('../img/search.png')
+let searchbutton = require('./../../img/search.png')
+let logo = require('./../../img/symbol.png')
 
 export class NavLeftSide extends Component {
     state = {
         search: "",
       };
-
-    handleStyle = (e) => { // search input charges to white ":active" for writing.
-        // const styling_SearchBar = {
-        // style={{backgroundImage: white;}}
-        //     background_color: 'white',
-        // }
-        // return styling_SearchBar;
-    };
 
     handleChange = e => {
         this.setState({
@@ -28,13 +21,18 @@ export class NavLeftSide extends Component {
         return (
             <> 
                 <div>
-                    <Link to='/influers/'  className='logo'>   I     </Link>
+                    <Link to='/'> 
+                        <img  className='logo' alt='' src={logo} />  
+                    </Link>
                     
+                        <img className='buttonSearch' alt='' src={searchbutton}/>
+                   
                         <input 
+                        
                             type='search' 
                             name='search' 
                             value={search}
-                            className='search' 
+                            className='search search_bar' 
                             placeholder='Search Influers' 
                             onClick={this.handleStyle}
                             onChange={this.handleChange}

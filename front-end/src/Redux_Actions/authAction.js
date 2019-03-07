@@ -45,18 +45,20 @@ export const LogOutUser = ( ) =>  dispatch => {
 };
 
 export const checkAuthenticateStatus = () => dispatch => { 
-    return axios.get('/users/isLoggedIn')
-    .then(user => {
-        if (user.data.username === Auth.getToken()) {
-            console.log('REACHED AUTHENTICATE', user.data)
-            return dispatch({ // test  // talk to Reed about it
-                receive: receiveUserAuth(user.data.email),
-                isLoggedIn: Auth.isUserAuthenticated(),
-                username: Auth.getToken()
-            })
+    console.log('chek iff auth status is running')
+
+    axios.get('/users/isLoggedIn')
+    .then(res => {
+        let user = res.data;
+        console.log( user, 'user that arrived')
+        console.log(user.email,"===" ,Auth.getToken())
+        if (user.email === Auth.getToken()) {
+            console.log('REACHED AUTHENTICATE', user)
+            return dispatch(receiveUserAuth(user))
+
         }else{
-            if (user.data.email) {
-                LogOutUser();
+            if (user.email) {
+                dispatch(LogOutUser());
             } else {
                 Auth.deauthenticateUser();
             }

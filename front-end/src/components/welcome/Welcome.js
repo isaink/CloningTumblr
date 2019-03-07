@@ -24,11 +24,24 @@ class Welcome extends Component {
       })
     };
 
-    handleChange = (event) => {
+    handleChange = (e) => {
       this.setState({
-        [event.target.name]: event.target.value 
+        [e.target.name]: e.target.value 
       })
     };
+
+    handleLogginUser = async (e) => {
+      e.preventDefault();
+      let { email, password } = this.state;
+  
+      await this.props.logInUser({ email, password });
+      await this.props.checkAuthenticateStatus(); 
+    }
+
+    handleLogOutUser = () => {
+      // let {}
+      this.props.LogOutUser();
+    }
 
     handleSubmission = async (event) => {
       event.preventDefault();
@@ -37,59 +50,21 @@ class Welcome extends Component {
       // CALL REDUX ACTION AFTER
       await this.props.newUser({ username, password, email });
       await this.props.logInUser({ username, password }); // this state have to macth with the backend router
+      await this.props.checkAuthenticateStatus();
     }; 
 
-    // registerUser = async e => {
-    //     e.preventDefault();
-    //     const { username, password, email } = this.state;
-    
-    //     await axios.post("/new", { username, password, email });
-
-    //     Auth.authenticateUser(username);
-    
-    //     await axios.post("/users/login", { username, password });
-    
-    //     await this.props.checkAuthenticateStatus();
-    
-    //     this.setState({
-    //       username: "",
-    //       password: ""
-    //     });
-    // };
-
-    // loginUser = e => {
-    //     e.preventDefault();
-    //     const { username, password } = this.state;
-    
-    //     axios
-    //       .post("/users/login", { username, password })
-    //       .then(() => {
-    //         Auth.authenticateUser(username);
-    //       })
-    //       .then(() => {
-    //         this.props.checkAuthenticateStatus();
-    //       })
-    //       .then(() => {
-    //         this.setState({
-    //           username: "",
-    //           password: ""
-    //         });
-    //       });
-    // };
-
     renderForm = () => {
-      console.log('WELCOME PROPS',this.props)
       switch(this.state.startUp){
         case false :
           return (
             <>
               <LogInForm 
+                startUp={this.startUp}
                 loginUser={this.loginUser}
                 email={this.state.email}
-                password={this.state.email}
+                password={this.state.password}
                 handleChange={this.handleChange}
-                handleSubmission={this.handleSubmission}
-                startUp={this.startUp}
+                handleLogginUser={ this.handleLogginUser }
               />
             </>
         )
@@ -97,11 +72,11 @@ class Welcome extends Component {
         return (
             <>
                <SignUpForm 
+                startUp={this.startUp}
                 email={this.state.email}
                 password={this.state.password} 
                 username={this.state.username} 
                 handleChange={this.handleChange} 
-                startUp={this.startUp}
                 handleSubmission={this.handleSubmission }
               />
             </> 
@@ -124,12 +99,13 @@ class Welcome extends Component {
     };
 
     componentDidMount(){
-        this.props.fetchRandomBG()
+        this.props.fetchRandomBG();
+        this.props.checkAuthenticateStatus();
     };
 
    render(){
     
-    console.log(this.props, 'this is the props')
+    console.log(this.props, 'PROPS from Welcome Component')
 
     return (
         <>  

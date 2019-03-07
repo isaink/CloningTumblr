@@ -3,14 +3,16 @@ const { db } = require('./../db/queries/connector'); //connecting to the databas
 
 module.exports = () => {
     passport.serializeUser((user, done) => {
-        done(null, user.username);
+        delete user.password_digest //removing the password digest
+        done(null, user);
     });
 
-    passport.deserializeUser((username, done) => {
-        db.one("SELECT * FROM users WHERE username = ${username}", {
-            username: username
+    passport.deserializeUser((user, done) => {
+        db.one("SELECT * FROM users WHERE email = ${email}", {
+            email: user.email
         }).then(user => {
-            done(null, user.username);
+            delete user.password_digest //removing the password digest
+            done(null, user);
         }).catch(err => {
             done(err, null);
         });

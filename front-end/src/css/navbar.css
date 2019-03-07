@@ -4,38 +4,52 @@ hr.line {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-
-.icon{
-    height: 50px;
-    /* padding-bottom: 20px; */
-}
-.home {
+.icons_leftside {
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-column-gap: 5px;
+    margin-top: 8px;
     height: 30px;
+}
+
+.home {
+    grid-column: 1;
+    height: 30px;
+
 }
 .follows{
     height: 30px;
+    grid-column: 2;
    
 }
 .followers{
     height: 50px;
+    /* grid-area:  */
 }
+
 .account{
     height: 30px;
 }
+.icons {
+    border-radius: 5px;
+    background-color: #46b7f8;
+    margin-right: 10px;
+}
 
+.search_bar:focus{
+    background-color: white;
+}
 .nav_LogIn {
     display: flex;
     justify-content: space-between;
     padding-right: 10px;
-    padding-left: 20px;
-        /* background: white; */
-    /* background: #a4acb5; */
 }
 .logo{
-    /* font-family: 'Satisfy', cursive; */
     font-family: 'Vollkorn', serif;    
+    max-width: 40px;
     font: bold;
     color: white;
+    margin-left: 20px;
     font-size: 30px;  
     background-color: rgba(0,0,0,0.1); 
 }
@@ -43,24 +57,34 @@ hr.line {
 .search {
     height: 30px;
     outline: none;
-    width: 500px;
-    background: url(../img/search.png);
-    top: 10px;
-    left: 10px;
-    background: rgba(0,0,0,.13);
-}
-input{
+    width: 500px; 
+    background: rgba(0,0,0,.25);
+    border-radius: 5px;
+    padding-right: 10px;
+    padding-bottom: 15px;
+    padding-left: 39px;
+    font-weight: 400;
+    font-size: 15px;
     margin-left: 20px;
-    border-radius: 5px; 
-    /* border: 1px solid #aaa; */
-    border: rgba(0,0,0,.13);
+    margin-top: 10px;
 }
-/* :placeholder-shown{
-    margin-left: 20px;
-} */
+.buttonSearch{
+    height: 17px;
+    z-index: 2;
+    top: 8px;
+    max-width: 540px;
+    margin-right: 16px;
+    position: absolute;
+    padding-left: 30px;
+    padding-top: 7px;
+}
 
 .logOut {
     height: 30px;
     width: 50px;
+    background-color: white;
+    border: none;
     margin: auto;
+    padding-left: 13px;
+    padding-right: 13px;
 }

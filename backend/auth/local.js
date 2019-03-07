@@ -6,9 +6,11 @@ const helpers = require("./helpers");
 const { db } = require('./../db/queries/connector'); //connecting to the database
 
 passport.use(
-  new LocalStrategy((username, password, done) => {
-    db.one("SELECT * FROM users WHERE username = ${username}", {
-      username: username
+  new LocalStrategy({  
+     usernameField: 'email',
+  },(email, password, done) => {
+    db.one("SELECT * FROM users WHERE email = ${email}", {
+      email: email
     })
       .then(user => {
         if (!helpers.comparePass(password, user.password_digest)) {

@@ -5,7 +5,7 @@ import { newUser, checkAuthenticateStatus } from '../Redux_Actions/authAction';
 
 const mapStateToProps = (state) => {
     return { 
-        user: state.userAuth   
+        user: state.userAuth.user   
     }
 };
 

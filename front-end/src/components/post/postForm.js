@@ -1,5 +1,5 @@
 import React from 'react';
-let username = './db/'
+// let username = './db/'
 
 const postForm = ({ onChange }) => {
     return (
@@ -19,4 +19,4 @@ const postForm = ({ onChange }) => {
         </>
     )
 }
-export default postNav
+export default postForm

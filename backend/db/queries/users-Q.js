@@ -81,7 +81,7 @@ const loginUser = (req, res)=> {
 // IS LOGGED IN for ** USER AUTH **
 const isLoggedIn = (req, res) => {
     if (req.user) {
-      res.json({ user: req.user });
+      res.json(req.user);
     } else {
       res.json({ user: null });
     }

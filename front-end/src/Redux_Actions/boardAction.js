@@ -10,10 +10,10 @@ export const receivedUser = ( user ) => {
 export const userInfo = () => dispatch => {
     return  axios.get("/dashboard")
     .then( (res) => {
-        console.log(res.data.info)
+        console.log(res.data.info, 'userINfo' )
     })
     .catch(err => {
-        console.log("Got error", error)
+        console.log("Got error", err)
     })
 };
 

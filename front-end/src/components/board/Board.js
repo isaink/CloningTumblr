@@ -14,16 +14,15 @@ export default class Board extends Component {
                         </div>
 
                         {/* <div className="posts_profiles ">
-                            <p>profiles</p>
+                            <p>profiles</p>cd
                         </div> */}
 
                         <div className="nav">
-                                <PostNav />
+                            <PostNav />
                         </div>
 
                         <div className="postFeed">
                             <post>posts</post>
-                      
                         </div>
 
                         <widgets> widgets </widgets>

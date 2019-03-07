@@ -1,12 +1,50 @@
 .content_creator {
-    
+    /* display: grid;
+    grid-template-columns: 48px;
+    grid-template-areas: 
+    'text'; */
+    /* height: 40px; */
 }
 
 .a{
-    height: 30px;
-    width: 64px;
+    /* grid-area: text; */
+    height: 48px;
+    width: 48px;
+    /* padding-top: 20px; */
+    /* border-right-color: black; */
+    padding-left: 15px;
 }
 
-.post_buttons{
+.camara{
+    /* grid-area: photo; */
+    /* grid-column: 2; */
+    width: 50px;
+}
+
+.bgButton {
+    background: #f4f8fc;
+    width: 76px;
+    height: 99px;
+    border-radius: 5px;
+    margin-left: 80px;
+}
+
+.a:hover{
+    height: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 40px;
+}
+
+/* .post_buttons{
     padding:0 1px 0 7px
+} */
+
+.postfeed{
+    
+    font-size: 14px;
+    background: #fff;
+    padding: 15px 0 0;
+    word-wrap: break-word;
+    border-radius: 3px;
 }

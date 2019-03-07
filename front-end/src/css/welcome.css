@@ -8,12 +8,15 @@ h2 {
     font-size: 50px;
     color: white;
 }
-button {
-    outline:none;
-    width: 200px;
-    height: 40px;
+/* button {
+    height: 30px;
+    width: 50px;
+    background-color: white;
+    margin: auto;
+    padding-left: 13px;
+    padding-right: 13px;
     
-}
+} */
 .start {
     background-color: #00b5ff;
     border-radius: 5px;
