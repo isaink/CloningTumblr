@@ -20,7 +20,7 @@ export class NavLeftSide extends Component {
         const { search } = this.state;
         return (
             <> 
-                <div>
+                <div className='containerNav'>
                     <Link to='/'> 
                         <img  className='logo' alt='' src={logo} />  
                     </Link>

@@ -1,14 +1,24 @@
 import axios from 'axios';
 export let RECEIVE_POST = "RECEIVE_POST";
+export let FETCH_POSTS = 'FETCH_POSTS';
 export let RANDOM_BACKGROUND = 'RANDOM_BACKGROUND';
 export let FETCH_ERROR = 'FETCH_ERROR';
 
-
-export const receivedPost = ( post ) => {
+export const receivedPosts = ( posts ) => {
     return {
         type: RECEIVE_POST, 
-        post: post // is the payload
+        posts: posts // is the payload
     }
+};
+
+export const fetchPosts = () => dispatch => {
+    axios.get('/dashboard')
+    .then( res => {
+        return dispatch(receivedPosts( res.posts));
+    })
+    .catch((err) => { 
+        return dispatch(fetchErrors(err))
+    })
 };
 
 export const receivedRandomBG = ( img ) => {
@@ -18,25 +28,19 @@ export const receivedRandomBG = ( img ) => {
     }
 };
 
-export const getErrors = (err) => {
+export const fetchRandomBG = () => dispatch => {
+    return axios.get('/welcome')
+    .then( res => {
+        return dispatch(receivedRandomBG(res.data.img.url))
+    })
+    .catch( (err) => { 
+        return dispatch(fetchErrors(err))
+    })
+};
+
+export const fetchErrors = (err) => {
     return {
         type: FETCH_ERROR,
         err: err
     }
-}
-
-export const fetchRandomBG = () => dispatch => {
-    return axios.get('/welcome')
-    .then( res => {
-        console.log(res, "RES")
-        return dispatch(receivedRandomBG(res.data.post.body))
-
-    })
-    .catch( (err) => { 
-        return dispatch(getErrors(err))
-        // dispatch({
-        //     type: FETCH_ERROR,
-        //     err: err
-        // })
-    })
-}
+};

@@ -2,11 +2,18 @@ import axios from 'axios';
 import Auth from '../components/utils/Auth';
 
 export let RECEIVE_USER_AUTH = 'RECEIVE_USER_AUTH';
+export let LOG_OUT_USER = 'LOG_OUT_USER';
 
 export const receiveUserAuth = ( user ) => {
     return {
         type: RECEIVE_USER_AUTH,
         user: user
+    }
+};
+
+export const logOut = () => {
+    return {
+        type: LOG_OUT_USER
     }
 };
 
@@ -33,11 +40,13 @@ export const logInUser = ( user ) =>  dispatch => {
     })
 };
 
-export const LogOutUser = ( ) =>  dispatch => {
-    return axios.post('/users/logout')
+export const logOutUser = ( ) =>  dispatch => {
+    console.log('logOut')
+    axios.post('/users/logout')
+    
     .then(() => {
         Auth.deauthenticateUser();
-        return dispatch(receiveUserAuth(null))
+        return dispatch( logOut())
     })
     .catch(err => {
         Auth.deauthenticateUser();
@@ -58,7 +67,7 @@ export const checkAuthenticateStatus = () => dispatch => {
 
         }else{
             if (user.email) {
-                dispatch(LogOutUser());
+                dispatch(logOutUser());
             } else {
                 Auth.deauthenticateUser();
             }

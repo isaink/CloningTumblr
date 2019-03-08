@@ -26,7 +26,9 @@ export default class Board extends Component {
             <>
                 <div className='container'>
                         <div className="pic ">
-                            <img url='' className='profile' alt=""/>
+                            {/* <Link to={`/users/${user.username}`}> */} 
+                                <img url='' className='profile' alt=""/>
+                            {/* </Link> */}
                         </div>
 
                         <div className="nav">

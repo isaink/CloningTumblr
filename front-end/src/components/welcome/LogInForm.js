@@ -7,12 +7,18 @@ export default class LogInForm extends React.Component {
         const {handleLogginUser, email, password, handleChange  } = this.props;
         return (
             <>
-                <form onSubmit={handleLogginUser }> 
+                <form onSubmit={handleLogginUser}> 
 
-                    <input name='email' value={email} placeholder='Email' onChange={handleChange} />
-                    <input name='password' value={password} placeholder='Password' onChange={handleChange} />
+                    <div>
+                        <input className='LogInform' name='email' value={email} placeholder='Email' onChange={handleChange} />
+                    </div>
+                    <div>
+                        <input className='LogInform' name='password' value={password} placeholder='Password' onChange={handleChange} />
+                    </div>
+                    <div>   
+                        <button className='log_inBlue' type='submit'>Log In</button>
+                    </div>
                     
-                    <button type='submit'>Log In</button>
                 </form>
 
             </>

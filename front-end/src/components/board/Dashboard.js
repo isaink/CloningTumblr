@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import Board from './Board';
 import BoardContainer from '../../Redux_Containers/BoardContainer';
 import './../../css/board.css';
 
@@ -17,7 +16,7 @@ export default class Dashboard extends Component {
 
     render(){
         // console.log(this.state.pic)
-        const { posts, profile_pic } = this.state;
+        const { posts} = this.state;
 
         return (
             <>  

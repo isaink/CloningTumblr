@@ -1,6 +1,7 @@
 import App from '../App';
 import { connect } from 'react-redux';
-import { newUser, logInUser, checkAuthenticateStatus, LogOutUser } from '../Redux_Actions/authAction'; 
+import { withRouter } from 'react-router-dom'
+import { newUser, logInUser, checkAuthenticateStatus } from '../Redux_Actions/authAction'; 
 
 const mapStateToProps = (state) => {
     return {
@@ -15,8 +16,7 @@ const mapDispatchToProps = (dispatch) => {
         checkAuthenticateStatus: () => {
             dispatch( checkAuthenticateStatus())
         },
-        logOutUser: () => dispatch(LogOutUser()),
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

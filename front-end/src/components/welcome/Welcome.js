@@ -30,12 +30,11 @@ class Welcome extends Component {
       })
     };
 
-    handleLogginUser = async (e) => {
+    handleLogginUser = (e) => {
       e.preventDefault();
       let { email, password } = this.state;
-  
-      await this.props.logInUser({ email, password });
-      await this.props.checkAuthenticateStatus(); 
+
+      this.props.logInUser({ email, password });
     }
 
     handleLogOutUser = () => {
@@ -49,7 +48,7 @@ class Welcome extends Component {
       // CALL REDUX ACTION AFTER
       await this.props.newUser({ username, password, email });
       await this.props.logInUser({ username, password }); // this state have to macth with the backend router
-      await this.props.checkAuthenticateStatus();
+
     }; 
 
     renderForm = () => {
@@ -99,13 +98,13 @@ class Welcome extends Component {
 
     componentDidMount(){
         this.props.fetchRandomBG();
-        this.props.checkAuthenticateStatus();
     };
 
    render(){
     
     console.log(this.props, 'PROPS from Welcome Component')
-
+    console.log(this.props.img, 'img');
+    
     return (
         <>  
         <div className='compWelcome' style={{backgroundImage: `url(${this.props.img})`}}>

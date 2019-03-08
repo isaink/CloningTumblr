@@ -1,11 +1,14 @@
-import { RANDOM_BACKGROUND  } from '../Redux_Actions/postsAction';
+import { RECEIVE_POST  } from '../Redux_Actions/postsAction';
 
-export const randomBgReducer = ( initialState = {}, action) => {
-    // Object.freeze(initialState);
+export const postsReducer = ( initialState = { posts: '' }, action) => {
+
     switch(action.type){
-        case RANDOM_BACKGROUND : 
-            return action.img;
+        case RECEIVE_POST :
+            return {
+                ...initialState,
+                posts: action.posts  //payload
+            }
         default:
             return initialState;
     }
-}
+};

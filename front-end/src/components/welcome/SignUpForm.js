@@ -11,21 +11,23 @@ export default class SignUpForm extends React.Component {
         return (
             <>
                 <form className='form_register' onSubmit={handleSubmission} >
-                    <input className='' 
+                    <input className='signUpInput' 
                         name='email' 
                         placeholder='Email' 
                         type="text" 
                         value={email} 
                         onChange={handleChange}
-                    />                        
-                    <input className='' 
+                        
+                    />       
+                                    
+                    <input className='signUpInput'
                         name='password' 
                         placeholder='Password' 
                         type="text" 
                         value={password} 
                         onChange={handleChange}
                     />
-                    <input className='' 
+                    <input className='signUpInput'
                         name='username'
                         placeholder='Username' 
                         type="text"
@@ -33,7 +35,7 @@ export default class SignUpForm extends React.Component {
                         onChange={handleChange}
                     /> 
                     
-                    <button type='submit' onSubmit={handleSubmission} >Sign Up</button>
+                    <button className='signUnBt'type='submit' onSubmit={handleSubmission} >Sign Up</button>
                 </form>
 
             </>

@@ -1,20 +1,17 @@
 import { connect } from 'react-redux';
-import { checkAuthenticateStatus, LogOutUser} from '../Redux_Actions/authAction'; 
-import { Nav } from './../components/menus/Navbar';
+import { logOutUser} from '../Redux_Actions/authAction'; 
+import Nav  from './../components/menus/Navbar';
 
 const mapStateToProps = state => {
     return {
-        user: state.userAuth.user,
-        buttons: state.toggleButtons.buttons
+        isLoggedIn: state.userAuth.isLoggedIn
     }
-}
+};
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        logOutUser: () => dispatch(LogOutUser()),
-        checkAuthenticateStatus: () => {
-            dispatch( checkAuthenticateStatus())
-        },
+        logOutUser: () => dispatch(logOutUser()),
     }
-}
+};
+ 
 export default connect(mapStateToProps, mapDispatchToProps )(Nav)

@@ -8,16 +8,15 @@ let home = require('../../img/home2.png');
 let account = require('../../img/account.png');
 let follows = require('../../img/follows1.png');
 
-export default class Nav extends Component {
+class Nav extends Component {
 
-    handleLogOutUser = async () => {
-        await this.props.LogOutUser();
-        await this.props.checkAuthenticateStatus();
+    handleLogOutUser =  () => {
+        this.props.logOutUser();
     };
 
     render(){
         console.log('NAV USER', this.props.user)
-        const { user } = this.props;
+        const {isLoggedIn } = this.props;
 
         return (
             <> 
@@ -25,7 +24,7 @@ export default class Nav extends Component {
     
                     <NavLeftSide /> 
     
-                    {user == null && 
+                    {isLoggedIn ? 
                         <div className="icons_leftside"> 
                             <div className='icons' >
                                 <Link to='/dashboard'  >  
@@ -45,12 +44,13 @@ export default class Nav extends Component {
                                 </Link>
                             </div>
                            
-                            {/* <div className="logOut"> */}
-                                <button onClick={this.handleLogOutUser} className="logOut" > 
+                            <button onClick={this.handleLogOutUser} className="logOut" > 
                                 LogOut
-                                </button>
-                            {/* </div> */}
+                            </button>
+
                         </div>
+                    :
+                    null
                     }
                 </div>
                 <hr className='line'/>
@@ -58,3 +58,5 @@ export default class Nav extends Component {
         )
     }
 }
+
+export default Nav;

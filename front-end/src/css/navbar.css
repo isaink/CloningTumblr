@@ -1,3 +1,8 @@
+.containerNav {
+    display: grid;
+    grid-template: 10% 30%, 70%
+}
+
 hr.line {
     border: 0;
     height: 0;
@@ -47,37 +52,40 @@ hr.line {
     height: 50px;
 }
 .logo{
+    grid-column: 1;
     font-family: 'Vollkorn', serif;    
     max-width: 40px;
     font: bold;
     color: white;
     margin-left: 20px;
+    padding-top: 15px;
     font-size: 30px;  
     background-color: rgba(0,0,0,0.1); 
 }
 
 .search {
+    grid-column: 2;
     height: 30px;
     outline: none;
     width: 500px; 
     background: rgba(0,0,0,.25);
     border-radius: 5px;
-    padding-right: 10px;
-    padding-bottom: 15px;
     padding-left: 39px;
     font-weight: 400;
     font-size: 15px;
     margin-left: 20px;
     margin-top: 10px;
+    padding-right: 10px;
+    box-shadow: none;
+    border: 0; 
 }
 .buttonSearch{
     height: 17px;
-    z-index: 2;
-    top: 8px;
+    /* top: 8px; */
     max-width: 540px;
     margin-right: 16px;
     position: absolute;
-    padding-left: 30px;
+    padding-left: 90px;
     padding-top: 19px;
 }
 

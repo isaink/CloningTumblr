@@ -28,7 +28,8 @@ CREATE TABLE blog (
 CREATE TABLE posts (
     id SERIAL PRIMARY KEY,
     author INT REFERENCES users(id) ON DELETE SET NULL,
-    title VARCHAR NOT NULL,
+    title VARCHAR,
+    url VARCHAR NOT NULL,
     body VARCHAR NOT NULL,
     blog INT REFERENCES blog(id) ON DELETE CASCADE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -69,12 +70,12 @@ VALUES('isa', 10294,'inksmindsblog', '@SASDS.com', 'https://jojotastic.com/wp-co
 INSERT INTO blog (blogger, header_pic, brand_blog, intro_text)
 VALUES(1, 'https://66.media.tumblr.com/avatar_0571f945536a_128.pnj', NULL, 'hello there, welcome~');
 
-INSERT INTO posts (author, title, body, blog, created_at, post_type)
-VALUES(1, 'Crossfire', 'I would trade my luck to know, Why he is caught in the crossfire', 1, '2019-02-12 05:30:15', 'text'),
-( 2, 'inspired by @aka-outwork and tommy hilfiger fall 2017', 'https://66.media.tumblr.com/23fbcb648f0bf15423c9d8b2aa4be03a/tumblr_pjwdhmEv571rll77uo1_1280.png', 1, '2019-02-12 05:30:15', 'img');
+INSERT INTO posts (author, title, url, body, blog, created_at, post_type)
+VALUES(1, 'Crossfire', 'https://images.genius.com/be4a33678856cc57075ce947849d7d48.1000x1000x1.jpg', 'I would trade my luck to know, Why he is caught in the crossfire', 1, '2019-02-12 05:30:15', 'text'),
+( 2, NULL , 'https://66.media.tumblr.com/c0a72d44b1c5086d7e8016220340db07/tumblr_pnrhzrhiul1rll77uo1_1280.jpg', '✧ calm cafe' ,1, '2019-02-12 05:30:15', 'img');
 
 INSERT INTO tags (tagname, post)
-VALUES('music', 1), ('crossfire', 1),('lyric', 1);
+VALUES('music', 1), ('crossfire', 1),('lyric', 1), ('drawing', 2), ('coffee', 2); 
 
 INSERT INTO likes (liked_posts)
 VALUES(1);

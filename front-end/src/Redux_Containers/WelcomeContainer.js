@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { fetchRandomBG } from '../Redux_Actions/postsAction';
-import { newUser, logInUser, checkAuthenticateStatus, LogOutUser } from '../Redux_Actions/authAction'; 
+import { newUser, logInUser } from '../Redux_Actions/authAction'; 
 import  Welcome from '../components/welcome/Welcome';
 
 const mapStateToProps = (state) => {
@@ -15,10 +15,6 @@ const mapDispatchToProps = (dispatch) => {
         fetchRandomBG: () => dispatch( fetchRandomBG() ),
         newUser: (user) => dispatch( newUser(user) ),
         logInUser: (user) => dispatch( logInUser(user) ),
-        checkAuthenticateStatus: () => {
-            dispatch( checkAuthenticateStatus())
-        },
-        logOutUser: () => dispatch(LogOutUser()),
     }
             
 };
