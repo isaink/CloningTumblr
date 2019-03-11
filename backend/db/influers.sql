@@ -72,8 +72,9 @@ VALUES(1, 'https://66.media.tumblr.com/avatar_0571f945536a_128.pnj', NULL, 'hell
 
 INSERT INTO posts (author, title, url, body, blog, created_at, post_type)
 VALUES(1, 'Crossfire', 'https://images.genius.com/be4a33678856cc57075ce947849d7d48.1000x1000x1.jpg', 'I would trade my luck to know, Why he is caught in the crossfire', 1, '2019-02-12 05:30:15', 'text'),
-( 2, NULL , 'https://66.media.tumblr.com/c0a72d44b1c5086d7e8016220340db07/tumblr_pnrhzrhiul1rll77uo1_1280.jpg', '✧ calm cafe' ,1, '2019-02-12 05:30:15', 'img');
-
+( 2, NULL , 'https://cdna.artstation.com/p/assets/images/images/003/748/256/large/sophie-li-flood4-original-cropped.jpg?1477065202', '✧ Mundane ' ,1, '2019-02-12 05:30:15', 'img'),
+(2, Null, 'https://66.media.tumblr.com/d6349c1e6ebdd4fbb725d99a0815c10d/tumblr_pjuacjm6FE1rll77uo1_1280.gif', 'fade ˎˊ˗ ', 1, '2019-02-12 05:30:15', 'img'),
+(1, 'Absolutely epic illustrations from artist Chun Lo', 'https://66.media.tumblr.com/b203ab642201d73198a6ed89880c7349/tumblr_po0qwsosBf1qz9v0to5_1280.jpg', 'Chun Lo, Illustrations', 1, '2019-02-12 05:30:15', 'img');
 INSERT INTO tags (tagname, post)
 VALUES('music', 1), ('crossfire', 1),('lyric', 1), ('drawing', 2), ('coffee', 2); 
 

@@ -15,8 +15,7 @@ const mapDispatchToProps = (dispatch) => {
         fetchRandomBG: () => dispatch( fetchRandomBG() ),
         newUser: (user) => dispatch( newUser(user) ),
         logInUser: (user) => dispatch( logInUser(user) ),
-    }
-            
+    }        
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Welcome);

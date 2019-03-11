@@ -2,8 +2,7 @@ const { db } = require('./connector.js');
 
 //GET -> get to see all post -> influers/post/user/:id
 const getPosts = (req, res, next) => {
-    const postId = Number(req.params.id);
-    db.any('SELECT * FROM posts WHERE id=$1', [postId])
+    db.any('SELECT * FROM posts')
     .then( (post) => {
         res.status(200).json({
             status: 'Success',
@@ -38,10 +37,6 @@ const getPostbytypeImg = (req, res, next) => {
     })
 };
 
-const getPostbytypeText = (req, res, next) => {
-
-};
-
 //POST -> add a new post -> influers/post
 const addPost = ( req, res, next) => {
 
@@ -57,4 +52,4 @@ const deletePost = (req, res, next) => {
 
 };
 
-module.exports = { getPosts, getPost, getPostbytype, addPost, updatePost, deletePost }
+module.exports = { getPosts, getPost, addPost, updatePost, deletePost }

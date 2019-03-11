@@ -62,7 +62,7 @@ class Welcome extends Component {
                 email={this.state.email}
                 password={this.state.password}
                 handleChange={this.handleChange}
-                handleLogginUser={ this.handleLogginUser}
+                handleLogginUser={this.handleLogginUser}
               />
             </>
         )
@@ -102,12 +102,9 @@ class Welcome extends Component {
 
    render(){
     
-    console.log(this.props, 'PROPS from Welcome Component')
-    console.log(this.props.img, 'img');
-    
     return (
         <>  
-        <div className='compWelcome' style={{backgroundImage: `url(${this.props.img})`}}>
+        <div className='compWelcome' style={{backgroundImage: `url(${this.props.img })`, position: 'fixed', backgroundSize: `cover`, backgroundPosition: ' bottom' }}>
             
             <div className='welcome_saludo'>
                 <h2>Influers </h2>

@@ -4,7 +4,7 @@ export let FETCH_POSTS = 'FETCH_POSTS';
 export let RANDOM_BACKGROUND = 'RANDOM_BACKGROUND';
 export let FETCH_ERROR = 'FETCH_ERROR';
 
-export const receivedPosts = ( posts ) => {
+export const receivedPosts = ( posts ) => { 
     return {
         type: RECEIVE_POST, 
         posts: posts // is the payload
@@ -14,7 +14,7 @@ export const receivedPosts = ( posts ) => {
 export const fetchPosts = () => dispatch => {
     axios.get('/dashboard')
     .then( res => {
-        return dispatch(receivedPosts( res.posts));
+        return dispatch(receivedPosts( res.data.post));
     })
     .catch((err) => { 
         return dispatch(fetchErrors(err))

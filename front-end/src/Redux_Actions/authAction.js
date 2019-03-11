@@ -41,7 +41,6 @@ export const logInUser = ( user ) =>  dispatch => {
 };
 
 export const logOutUser = ( ) =>  dispatch => {
-    console.log('logOut')
     axios.post('/users/logout')
     
     .then(() => {
@@ -54,8 +53,6 @@ export const logOutUser = ( ) =>  dispatch => {
 };
 
 export const checkAuthenticateStatus = () => dispatch => { 
-    console.log('chek iff auth status is running')
-
     axios.get('/users/isLoggedIn')
     .then(res => {
         let user = res.data;

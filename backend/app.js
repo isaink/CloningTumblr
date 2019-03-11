@@ -10,6 +10,7 @@ const passport = require("./auth/local");
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var randomImg = require('./routes/randomImg');
+var { getPosts } = require('./db/queries/post-Q');
 
 var app = express();
 
@@ -45,6 +46,7 @@ app.use('/', indexRouter);  // this show Express title in Page
 app.use('/users', usersRouter); 
 // app.use('/influers', usersRouter);  //getting dashboard
 app.use('/welcome', randomImg );
+app.use('/dashboard', getPosts );
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

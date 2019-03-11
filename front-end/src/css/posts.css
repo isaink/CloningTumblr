@@ -1,0 +1,21 @@
+.wrapper_post {
+    z-index: 2;
+    display: grid;
+    grid-template-rows: 10% 50% 10% 30%;
+    margin-bottom: 200px;
+}
+
+.title_post{
+    grid-row: 3;
+}
+
+.body_post{
+    grid-row: 4;
+    background-color: aliceblue;
+    opacity: 0.9;
+}
+
+.box_url{
+    grid-row: 2;
+}
+

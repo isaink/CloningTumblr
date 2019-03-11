@@ -1,7 +1,7 @@
 const { db } = require('./connector');
 
 const getRandomImg = (req, res, next) => {
-    db.one("SELECT * FROM posts WHERE post_type = 'img' ORDER BY RANDOM()  ")
+    db.one("SELECT * FROM posts WHERE post_type = 'img' ORDER BY RANDOM() LIMIT 1  ")
     .then((img) => {
         res.status(200).json({  
             status: 'Sucess',

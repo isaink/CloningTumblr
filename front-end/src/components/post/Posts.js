@@ -1,24 +1,33 @@
-import React, { Component } from "react";
+import React from "react";
+import './../../css/posts.css';
 
-export const postsUser = (  ) => {
-    cont { posts } = this.props;
 
-    let posts = posts.map((post, i )=> {
+export const PostsBox = ( { posts } ) => {
+
+    let postsUsers = posts.map((post, i) => {
+
         return (
             <>
-                <div key={i} >
-                    <div>
-                      
+                <div className='wrapper_post' key={post.i} >
+                    <div className='box_url' style={{backgroundImage: `url(${post.url })`, width:'500px', height:'300px', backgroundSize: `cover`}}>
+                        {post.url}
+                    </div>
+
+                    <div className='title_post'>
+                        <h3> {post.title} </h3>
+                    </div>
+                    <div className='body_post' >
+                    
+                        <p>{ post.body}</p>
                     </div>
                 </div>  
-                        {movie.title}
-
             </>
         )
     }) 
+
     return(
         <>
-
+            {postsUsers}
         </>
     )
-}
+};

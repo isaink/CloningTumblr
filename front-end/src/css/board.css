@@ -21,7 +21,7 @@
 .postFeed{
     grid-row: 2;
     grid-column: 2;
-    background: red;
+    background: #001935;
 }
 
 .pic {
@@ -77,6 +77,12 @@
     width: 48px;
     padding-top: 15px;
 }
+.a:hover{
+    grid-column: 1;
+    /* height: 40px; */
+    width: 40px;
+    padding-top: 12px;
+}
 
 .camara{
     padding-top: 15px;
@@ -84,5 +90,14 @@
     width: 50px;
 }
 
+.camara:hover{
+    padding-top: 12px;
+    grid-column: 2;
+    width: 47px;
+}
 
+.postsBox{
+    grid-row: 2;
+    grid-column: 2;
+}
 
